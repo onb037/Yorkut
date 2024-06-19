@@ -1,52 +1,137 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
-    <main class="container">
-        <div class="container-formulario">
-            <div class="titulo-formulario">
-                <h1>Cadastre-se</h1>
-                <p>Veja o que seus amigos estão fazendo</p>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="../logo/Y-corrigida-removebg-preview.png" alt="">
+            <span>Yourkut</span>
+        </div>
+
+        <ul class="side-items">
+            <li class="side-item ativo">
+                <span class="material-symbols-outlined side-icon">
+                    home
+                </span>
+                <span class="side-text">Inicio</span>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    search
+                </span>
+                <span class="side-text">Pesquisa</span>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    notifications
+                </span>
+                <span class="side-text">Notificações</span>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    person
+                </span>
+                <span class="side-text">Amigos</span>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    post_add
+                </span>
+                <span class="side-text">Postar</span>
+            </li>
+        </ul>
+
+        <button class="sair" id="sair"><span class="material-symbols-outlined">
+            logout
+            </span>Sair</button>
+    </div>
+    <main class="main" id="main">
+        <section class="container-amigos">
+            <div class="amigo-info">
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="amigo-imagem">
+                <span class="amigo-user">User123</span>
             </div>
-            <form class="formulario">
-                <div class="inputs">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" id="nome" placeholder="Digite seu nome" required>
-                </div>
-                <div class="inputs">
-                    <label for="nome-usuario">Nome de usuario</label>
-                    <input type="text" name="nome-usuario" id="nome-usuario" placeholder="Digite seu nome de usuario"
-                        required>
-                </div>
-                <div class="inputs">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" id="email" placeholder="example@gmail.com" required>
-                </div>
-                <div class="inputs">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" id="senha" placeholder="Digite sua senha" required>
-                </div>
-
-                <div class="container-genero">
-                    <span>Gênero</span>
-                    <div class="genero-inputs">
-                        <div class="radio-button">
-                            <input type="radio" name="example-radio" value="option1" id="masculino">
-                            <label for="masculino">Masculino</label>
-                        </div>
-
-                        <div class="radio-button">
-                            <input type="radio" name="example-radio" value="option2" id="feminino" class="radio">
-                            <label for="feminino">Feminino</label>
-                        </div>
+        </section>
+        <section class="container-postagens">
+            <div class="postagem" id="postagem">
+                <div class="cabecalho-post">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
+                    <div class="user-info-post amigo-info">   
+                        <span class="nome-post">Fulano</span>
+                        <span class="user-post amigo-user">User123</span>
                     </div>
                 </div>
-                    <button>Cadastre-se</button>
-            </form>
-        </div>
-    </main>
+                <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
+                <div class="text-post">
+                    <span class="user-post">user123</span>
+                    <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
+                </div>
+                <div class="acao-post">
+                    <button class="acao-btn">
+                        <span class="material-symbols-outlined icon-like">
+                            mood
+                            </span>
+                    </button>
+                    <button class="acao-btn">
+                            <span class="material-symbols-outlined icon-coment">
+                                chat
+                                </span>
+                    </button>
+                </div>
+            </div>
 
-    <footer>
-        <p>&copy;Yorkut 2024</p>
-        <a href="./pages/sobre.html">Sobre nós</a>
-    </footer>
+            <div class="postagem" id="postagem">
+                <div class="cabecalho-post">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
+                    <div class="user-info-post amigo-info">   
+                        <span class="nome-post">Fulano</span>
+                        <span class="user-post amigo-user">User123</span>
+                    </div>
+                </div>
+                <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
+                <div class="text-post">
+                    <span class="user-post">user123</span>
+                    <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
+                </div>
+                <div class="acao-post">
+                    <button class="acao-btn">
+                        <span class="material-symbols-outlined icon-like">
+                            mood
+                            </span>
+                    </button>
+                    <button class="acao-btn">
+                            <span class="material-symbols-outlined icon-coment">
+                                chat
+                                </span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="postagem" id="postagem">
+                <div class="cabecalho-post">
+                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
+                    <div class="user-info-post amigo-info">   
+                        <span class="nome-post">Fulano</span>
+                        <span class="user-post amigo-user">User123</span>
+                    </div>
+                </div>
+                <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
+                <div class="text-post">
+                    <span class="user-post">user123</span>
+                    <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
+                </div>
+                <div class="acao-post">
+                    <button class="acao-btn">
+                        <span class="material-symbols-outlined icon-like">
+                            mood
+                            </span>
+                    </button>
+                    <button class="acao-btn">
+                            <span class="material-symbols-outlined icon-coment">
+                                chat
+                                </span>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </main>
 {% endblock %}

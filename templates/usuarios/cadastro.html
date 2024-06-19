@@ -10,42 +10,21 @@
     <title>Bem-Vindo ao Yorkut</title>
 </head>
 <body>
-    <main class="container">
-        <div class="container-formulario">
-            <div class="titulo-formulario">
-                <h1>CADASTRE-SE</h1>
-                <p>Veja o que seus amigos estão fazendo</p>
-            </div>
-            <form class="formulario">
-                <div class="inputs">
-                    <label for="nome">Nome</label>
-                    <input type="text" name="nome" class="form-control" id="nome" placeholder="Ex: Digite seu nome" required>
-                </div>
-                <div class="inputs">
-                    <label for="nome-usuario">Nome de usuario</label>
-                    <input type="text" name="nome-usuario" class="form-control" id="nome-usuario" placeholder="Ex: Digite seu nome de usuario"
-                        required>
-                </div>
-                <div class="inputs">
-                    <label for="email">Email</label>
-                    <input type="email" name="email" class="form-control" id="email" placeholder="Ex: example@gmail.com" required>
-                </div>
-                <div class="inputs">
-                    <label for="senha">Senha</label>
-                    <input type="password" name="senha" class="form-control" id="senha" placeholder="Ex: Digite sua senha" required>
-                </div>
-
-                <div class="container-genero">
-                    <span></span>
-                    <div class="genero-inputs">
-                        <div class="radio-button"> 
-                        </div>
-                    </div>
-                </div>
-                    <button href="{% url 'login' %}">Cadastre-se</button>
-            </form>
+    <form action="{% url 'cadastro' %}" method="POST" class="formulario">
+        {% csrf_token %}
+        <div>
+        {% for field in form.visible_fields %}
+            <div class="inputs">
+                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                {{ field }}  </div>
+         {% endfor %}
+            <button type="submit" class="botao-cadastrar" >Cadastrar</button>
         </div>
-    </main>
+        <div class="info">
+            <a href="#">Esqueceu sua senha ?</a>
+            <a href="{% url 'login' %}"> Ja tem uma conta ?<b> Logar </b></a>
+        </div>
+    </form>
 
     <footer>
         <p>&copy;Yorkut 2024</p>
