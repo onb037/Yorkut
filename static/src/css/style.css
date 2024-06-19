@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #2E2E2E, #333333);
+  background: linear-gradient(45deg,#2e2e2e,#181818);
 }
 
 .container-principal {
@@ -95,6 +95,7 @@ body {
   justify-content: center;
   width: 100%;
   gap: 10px;
+  border: 1px solid red;
 }
 
 .container-formulario .formulario .input-box {
@@ -102,6 +103,7 @@ body {
   flex-direction: column;
   gap: 5px;
   width: 80%;
+  border: 1px solid red;
 }
 .container-formulario .formulario .input-box label {
   font-size: 18px;

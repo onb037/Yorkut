@@ -17,7 +17,7 @@
         </div>
         <div class="container-secundario container-formulario">
             <div class="titulo-formulario">
-                <h2>LOGIN</h2>
+                <h2>Login</h2>
                 <span>Preencha todos os campos!</span>
             </div>
             <form action="{% url 'login' %}" method="POST" class="formulario">
@@ -25,7 +25,7 @@
                 <div>
                 {% for field in form.visible_fields %}
                     <div class="input-box">
-                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        <label for="{{ field.id_for_label }}" class="">{{ field.label }}</label>
                         {{ field }}  </div>
                  {% endfor %}
                     <button type="submit" class="botao-cadastrar" >Logar</button>

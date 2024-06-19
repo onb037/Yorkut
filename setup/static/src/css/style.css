@@ -17,7 +17,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(90deg, #2E2E2E, #333333);
+  background: linear-gradient(45deg,#2e2e2e,#181818);
 }
 
 .container-principal {
