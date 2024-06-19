@@ -20,15 +20,19 @@
                 <h2>LOGIN</h2>
                 <span>Preencha todos os campos!</span>
             </div>
-            <form action="" class="">
+            <form action="{% url 'login' %}" method="POST" class="formulario">
                 {% csrf_token %}
                 <div>
                 {% for field in form.visible_fields %}
-                    <div>
+                    <div class="input-box">
                         <label for="{{ field.id_for_label }}">{{ field.label }}</label>
                         {{ field }}  </div>
                  {% endfor %}
-                    <button type="submit">Logar</button>
+                    <button type="submit" class="botao-cadastrar" >Logar</button>
+                </div>
+                <div class="info">
+                    <a href="#">Esqueceu sua senha ?</a>
+                    <a href="{% url 'cadastro' %}"> Não tem uma conta ?<b> Cadastre-se </b></a>
                 </div>
             </form>
         </div>
