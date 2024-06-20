@@ -1,164 +1,292 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins",sans-serif;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 body {
-    width: 100%;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(90deg,#2E2E2E,#333333);
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(45deg, #2e2e2e, #181818);
+  background-size: 200%;
+  animation: colors 20s ease infinite;
+  transition: all .5s ease;
+}
 
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 .container-principal {
-    max-width: 85vw;
-    height: 80vh;
-    display: flex;
-    flex-wrap: wrap;
+  max-width: 85vw;
+  height: 80vh;
+  display: flex;
+  flex-wrap: wrap;
 
-    @media screen and (max-width: 720px) {
-        height: 140vh;
-        margin: 10vh 0;
-        flex-wrap: wrap-reverse;
-    }
-}
-  
-.container-secundario {
+  @media screen and (max-width: 768px) {
+    height: 160vh;
+    margin: 10vh 0;
+    flex-wrap: wrap-reverse;
+  }
+
+  .container-secundario {
     width: 50%;
     height: 100%;
-  
-    @media screen and (max-width: 720px) {
+
+    @media screen and (max-width: 768px) {
       width: 100%;
       height: 50%;
     }
+  }
 }
-  
+
 .container-imagem-registro {
-    background-color: none;
-    color: #fff;
-    padding: 40px 20px;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    align-items: center;
-    justify-content: center;
+  background-color: none;
+  color: #fff;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 
-    h1 {
-        font-size: 56px;
-        font-family: 'Montserrat',sans-serif;
+  h1 {
+    font-size: 56px;
+    font-family: "Montserrat", sans-serif;
 
-        b {
-            color: #004AAD;
-        }
+    @media screen and (max-width: 375px) {
+      font-size: 36px;
     }
+
+    b {
+      color: #004aad;
+    }
+  }
+
+  p {
+    @media screen and (max-width: 375px) {
+      font-size: 12px;
+    }
+  }
 }
 
 .container-formulario {
-    background-color: #2e2e2eb7;
-    border: 4px solid #004aad;
-    padding: 40px 20px;
+  background-color: rgba(46, 46, 46, 0.7176470588);
+  background: linear-gradient(#2e2e2e, #2e2e2e) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 16px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  color: #fff;
+  transition: .5s;
+
+  .titulo-formulario {
+    text-align: center;
+    font-family: "Montserrat", sans-serif;
+    margin-bottom: 20px;
+
+    h2 {
+      font-size: 28px;
+    }
+
+    span {
+      color: #7c7c7c;
+      font-size: 14px;
+    }
+  }
+
+  .formulario {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border-radius: 8px;
-    box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
-    color: #fff;
+    justify-content: center;
+    width: 100%;
+    gap: 20px;
 
-    .titulo-formulario {
-        text-align: center;
-        font-family: "Montserrat", sans-serif;
-        margin-bottom: 40px;
+    .input-box {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      width: 80%;
 
-        h2 {
-            font-size: 28px;
-        }
-
-        span {
-            color: #7c7c7c;
-            font-size: 14px;
-        }
-    }
-
-    .formulario {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+      @media screen and (max-width: 375px) {
         width: 100%;
-        gap: 10px;
+      }
 
-        .input-box {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            width: 80%;
+      label {
+        font-size: 18px;
+        margin-left: 10px;
 
-            label {
-                font-size: 18px;
-                margin-left: 10px;
-            }
+        @media screen and (max-width: 375px) {
+          font-size: 14px;
+        }
+      }
 
-            
-            input {
-                border: 2px solid #004AAD;
-                padding: 10px 10px;
-                border-radius: 10px;
-                font-size: 14px;
-                background-color: transparent;
-                color: #fff;
-                
-                &:focus {
-                    outline:1px solid #000;
-                }
-            }
+      input {
+        background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
+          linear-gradient(90deg, #004aad, #40c9ff) border-box;
+        border: 2px solid transparent;
+        padding: 10px 10px;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: transparent;
+        color: #fff;
+
+        @media screen and (max-width: 375px) {
+          font-size: 10;
         }
 
-
-        button {
-            width: 100%;
-            font-size: 20px;
-            background: #4a8df8;
-            padding: 5px;
-            border: none;
-            cursor: pointer;
-            transition: all ease-in  .5s;
-
-            &:hover {
-                background-color: #4a8df8a1;
-            }
+        &:focus {
+          outline: 1px solid #5de;
         }
-
-        .label-perfil {
-            width: 100%;
-            border: 1px solid #7c7c7c;
-            padding: 5px 10px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            color: #7c7c7c;
-            display: flex;
-            align-items: center;
-            gap: 5px;
-
-            input {
-                display: none;
-            }
-        }
-
-        .input-pequeno {
-            width: calc(50% - 5px);
-        }
-        
-        .input-normal {
-            width: 100%;
-        }
+      }
     }
+
+    button {
+      width: 50%;
+      font-size: 20px;
+      background: #4a8df8;
+      color: #fff;
+      padding: 5px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: all ease-in 0.5s;
+
+      &:hover {
+        background-color: rgba(74, 141, 248, 0.631372549);
+      }
+
+      @media screen and (max-width: 375px) {
+        width: 80%;
+      }
+    }
+
+
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    gap: 5px;
+  
+    a {
+      width: 100%;
+      color: #fff;
+      text-decoration: none;
+      text-align: center;
+  
+      &:hover {
+        color: #004aad;
+        transition: all ease-in 0.5s;
+      }
+
+      @media screen and (max-width: 375px) {
+        font-size: 14px;
+      }
+    }
+  }
 }
+
+
+footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: end;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  padding: 20px;
+  font-size: 14px;
+
+  a {
+    color: #fff;
+    text-decoration: none;
+
+    &:hover {
+      color: #004aad;
+      transition: all ease-in 0.5s;
+    }
+  }
+}
+
+
+
+// Modo Noturno
+
+.botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin: 10px;
+  background: transparent;
+  border-radius: 50%;
+  cursor: pointer;
+
+  span {
+    padding: 5px;
+    font-size: 24px;
+    color: #ffbb00;
+    text-align: center;
+    font-weight: bold;
+  }
+}
+
+body.light {
+  background: linear-gradient(45deg,#d6d6d6,#a5a5a5);
+  color: #000;
+
+  .container-imagem-registro {
+    background-color: none;
+    color: #000;
+  }
+
+  .container-formulario {
+    background-color: rgba(46, 46, 46, 0.7176470588);
+    background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+    border: 2px solid transparent;
+    color: #000;
+
+    .input-box input {
+        background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+        border: 2px solid transparent;
+        color: #000;
+    }
+
+    .info a {
+      color: #000;
+    }
+  }
+
+  footer  {
+    color: #000;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
