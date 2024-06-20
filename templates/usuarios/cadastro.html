@@ -1,34 +1,50 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{% static './src/css/cadastro.css'%}">
     <link rel="icon" href="{% static '../Yourkut/logo/Y-corrigida-removebg-preview.png' %}" type="image/x-icon">
     <title>Bem-Vindo ao Yorkut</title>
 </head>
+
 <body>
-    <form action="{% url 'cadastro' %}" method="POST" class="formulario">
-        {% csrf_token %}
-        <div>
-        {% for field in form.visible_fields %}
-            <div class="inputs">
-                <label for="{{ field.id_for_label }}">{{ field.label }}</label>
-                {{ field }}  </div>
-         {% endfor %}
-            <button type="submit" class="botao-cadastrar" >Cadastrar</button>
+    <main class="container">
+        <div class="container-formulario">
+            <div class="titulo-formulario">
+                <h1>Cadastre-se</h1>
+                <p>Veja o que seus amigos estão fazendo</p>
+            </div>
+
+            <form action="{% url 'cadastro' %}" method="POST" class="formulario">
+                {% csrf_token %}
+                
+                    {% for field in form.visible_fields %}
+                    <div class="inputs">
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                        {{ field }}
+                    </div>
+                    {% endfor %}
+                    <button type="submit" class="botao-cadastrar">Cadastrar</button>
+                
+                
+            </form>
+
+            <div class="info">
+                <a href="{% url 'login' %}"> Ja tem uma conta ?<b> Logar </b></a>
+            </div>
+
         </div>
-        <div class="info">
-            <a href="#">Esqueceu sua senha ?</a>
-            <a href="{% url 'login' %}"> Ja tem uma conta ?<b> Logar </b></a>
-        </div>
-    </form>
+    </main>
 
     <footer>
         <p>&copy;Yorkut 2024</p>
         <a href="./pages/sobre.html">Sobre nós</a>
     </footer>
 </body>
+
 </html>
