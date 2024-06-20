@@ -1,0 +1,96 @@
+.sidebar {
+    height: 100%;
+    width: 220px;
+    max-width: 40vw;
+    padding: 30px 10px;
+    position: fixed;
+
+    background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+    border-right: 0.25px solid transparent;
+    box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.1);
+    background-color: #18181836;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    color: #fff;
+
+    .logo {
+        width: 100%;
+
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-end;
+        gap: 5px;
+
+        img {
+            width: 30%;
+            height: auto;
+        }
+
+        span {
+            font-size: 20px;
+            font-weight: bold;
+            font-family: 'Montserrat',sans-serif;
+            color: #004aad;
+            margin-bottom: 5px;
+        }
+    }
+
+    .side-items {
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        
+        height: 75%;
+        list-style-type: none;
+        font-size: 20px;
+
+        .side-item {
+            padding: 15px 10px;
+            display: flex;
+            align-items: center;
+            justify-content: start;
+            gap: 5px;
+            cursor: pointer;
+            transition: all ease .5s;
+            border-radius: 5px;
+
+            &:hover {
+                background-color: #0254be6c;
+            }
+
+            .side-icon {
+                font-size: 28px;
+            }
+        }
+
+        .side-item.ativo {
+            font-weight: bold;
+        }
+    }
+
+    .sair {
+        border: none;
+        display: flex;
+        align-items: center;
+        justify-content: start;
+        gap: 5px;
+        color: red;
+        background-color: transparent;
+        font-size: 24px;
+        padding: 10px;
+        transition: all ease 0.5s;
+        border-radius: 5px;
+        cursor: pointer;
+
+        &:hover {
+            background-color: rgba(253, 69, 69, 0.192);
+        }
+
+        span {
+            color: red;
+        }
+    }
+}

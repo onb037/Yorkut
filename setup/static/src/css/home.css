@@ -1,0 +1,215 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background: #181818;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  height: 100%;
+  width: 220px;
+  max-width: 40vw;
+  padding: 30px 10px;
+  position: fixed;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(24, 24, 24, 0.2117647059);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+.sidebar .logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5px;
+}
+.sidebar .logo img {
+  width: 30%;
+  height: auto;
+}
+.sidebar .logo span {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #004aad;
+  margin-bottom: 5px;
+}
+.sidebar .side-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 75%;
+  list-style-type: none;
+  font-size: 20px;
+}
+.sidebar .side-items .side-item {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+}
+.sidebar .side-items .side-item:hover {
+  background-color: rgba(2, 84, 190, 0.4235294118);
+}
+.sidebar .side-items .side-item .side-icon {
+  font-size: 28px;
+}
+.sidebar .side-items .side-item.ativo {
+  font-weight: bold;
+}
+.sidebar .sair {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  color: red;
+  background-color: transparent;
+  font-size: 24px;
+  padding: 10px;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar .sair:hover {
+  background-color: rgba(253, 69, 69, 0.192);
+}
+.sidebar .sair span {
+  color: red;
+}
+
+main {
+  width: calc(100% - 220px);
+  height: auto;
+  min-height: 100vh;
+  padding: 25px;
+  margin: 0 0 0 220px;
+}
+main .container-amigos {
+  max-width: 100%;
+  height: 15vh;
+  margin-bottom: 20px;
+  overflow-x: auto;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+main .container-amigos .amigo-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-width: 100px;
+}
+main .container-amigos .amigo-info .amigo-imagem {
+  width: 65%;
+  height: 65%;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+}
+main .container-amigos .amigo-info .amigo-user {
+  text-transform: lowercase;
+  color: #fff;
+  font-size: 14px;
+}
+main .container-postagens {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  padding: 0 80px;
+}
+main .container-postagens .postagem {
+  width: 60%;
+  min-height: 80vh;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-bottom: 0.1px solid transparent;
+  padding: 15px 0;
+}
+main .container-postagens .postagem .cabecalho-post {
+  width: 100%;
+  min-height: 15%;
+  padding: 10px 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+}
+main .container-postagens .postagem .cabecalho-post .user-imagem {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+}
+main .container-postagens .postagem .cabecalho-post .user-info-post {
+  display: flex;
+  flex-direction: column;
+}
+main .container-postagens .postagem .cabecalho-post .user-info-post .nome-post {
+  font-size: 18px;
+  font-family: "Montserrat", sans-serif;
+}
+main .container-postagens .postagem .cabecalho-post .user-info-post .user-post {
+  font-size: 12px;
+  color: #b4b4b4;
+  text-transform: lowercase;
+}
+main .container-postagens .postagem .imagem-post {
+  min-width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+}
+main .container-postagens .postagem .text-post {
+  width: 100%;
+  color: #fff;
+  padding: 5px;
+}
+main .container-postagens .postagem .text-post .user-post {
+  text-transform: lowercase;
+  font-size: 16px;
+  font-weight: bold;
+}
+main .container-postagens .postagem .text-post .legenda-post {
+  font-size: 15px;
+  color: #d8d8d8;
+}
+main .container-postagens .postagem .acao-post {
+  display: flex;
+  gap: 10px;
+}
+main .container-postagens .postagem .acao-post .acao-btn {
+  font-size: 32px;
+  cursor: pointer;
+  display: flex;
+  background-color: transparent;
+  border: none;
+}
+main .container-postagens .postagem .acao-post .acao-btn span {
+  font-size: 32px;
+  color: #004aad;
+  transition: all ease 0.5s;
+}
+
+/*# sourceMappingURL=home.css.map */
