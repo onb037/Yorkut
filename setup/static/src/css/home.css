@@ -9,7 +9,6 @@
 
 body {
   min-height: 100vh;
-  height: 100vh;
   width: 100%;
   background: #181818;
   display: flex;
@@ -18,8 +17,8 @@ body {
 
 .sidebar {
   height: 100%;
-  width: 220px;
-  max-width: 40vw;
+  width: 200px;
+  max-width: 30vw;
   padding: 30px 10px;
   position: fixed;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -55,7 +54,7 @@ body {
   justify-content: start;
   height: 75%;
   list-style-type: none;
-  font-size: 20px;
+  font-size: 16px;
 }
 .sidebar .side-items .side-item {
   padding: 15px 10px;
@@ -70,8 +69,12 @@ body {
 .sidebar .side-items .side-item:hover {
   background-color: rgba(2, 84, 190, 0.4235294118);
 }
+.sidebar .side-items .side-item:hover .side-icon {
+  transform: scale(1.1);
+}
 .sidebar .side-items .side-item .side-icon {
   font-size: 28px;
+  transition: all ease 0.3s;
 }
 .sidebar .side-items .side-item.ativo {
   font-weight: bold;
@@ -84,7 +87,7 @@ body {
   gap: 5px;
   color: red;
   background-color: transparent;
-  font-size: 24px;
+  font-size: 16px;
   padding: 10px;
   transition: all ease 0.5s;
   border-radius: 5px;
@@ -97,15 +100,34 @@ body {
   color: red;
 }
 
+.modal-comentarios {
+  display: none;
+  max-width: 25%;
+  width: 25%;
+  border: 1px solid red;
+  position: fixed;
+  min-height: 100%;
+  top: 0;
+  right: 0;
+  overflow: hidden;
+}
+
+.modal-comentarios.ativo {
+  display: flex;
+}
+
 main {
-  width: calc(100% - 220px);
-  height: auto;
-  min-height: 100vh;
+  width: calc(75% - 200px);
+  height: 100%;
   padding: 25px;
-  margin: 0 0 0 220px;
+  margin: 0 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 main .container-amigos {
   max-width: 100%;
+  width: 100%;
   height: 15vh;
   margin-bottom: 20px;
   overflow-x: auto;
@@ -120,6 +142,7 @@ main .container-amigos .amigo-info {
   justify-content: space-between;
   height: 100%;
   min-width: 100px;
+  cursor: pointer;
 }
 main .container-amigos .amigo-info .amigo-imagem {
   width: 65%;
@@ -134,17 +157,16 @@ main .container-amigos .amigo-info .amigo-user {
   font-size: 14px;
 }
 main .container-postagens {
-  width: 100%;
+  width: 80%;
   height: auto;
   min-height: 100vh;
-  padding: 0 80px;
 }
 main .container-postagens .postagem {
-  width: 60%;
+  width: 100%;
   min-height: 80vh;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border-bottom: 0.1px solid transparent;
-  padding: 15px 0;
+  padding: 20px 0;
 }
 main .container-postagens .postagem .cabecalho-post {
   width: 100%;
@@ -161,17 +183,19 @@ main .container-postagens .postagem .cabecalho-post .user-imagem {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  cursor: pointer;
 }
 main .container-postagens .postagem .cabecalho-post .user-info-post {
   display: flex;
   flex-direction: column;
+  cursor: pointer;
 }
 main .container-postagens .postagem .cabecalho-post .user-info-post .nome-post {
-  font-size: 18px;
+  font-size: 16px;
   font-family: "Montserrat", sans-serif;
 }
 main .container-postagens .postagem .cabecalho-post .user-info-post .user-post {
-  font-size: 12px;
+  font-size: 10px;
   color: #b4b4b4;
   text-transform: lowercase;
 }
@@ -188,11 +212,11 @@ main .container-postagens .postagem .text-post {
 }
 main .container-postagens .postagem .text-post .user-post {
   text-transform: lowercase;
-  font-size: 16px;
+  font-size: 14px;
   font-weight: bold;
 }
 main .container-postagens .postagem .text-post .legenda-post {
-  font-size: 15px;
+  font-size: 13px;
   color: #d8d8d8;
 }
 main .container-postagens .postagem .acao-post {
@@ -205,11 +229,19 @@ main .container-postagens .postagem .acao-post .acao-btn {
   display: flex;
   background-color: transparent;
   border: none;
+  padding: 5px;
+  transition: all ease;
+  color: #004aad;
+}
+main .container-postagens .postagem .acao-post .acao-btn:active {
+  transform: scale(1.3);
 }
 main .container-postagens .postagem .acao-post .acao-btn span {
   font-size: 32px;
-  color: #004aad;
   transition: all ease 0.5s;
+}
+main .container-postagens .postagem .acao-post .acao-btn span:hover {
+  color: #faf768;
 }
 
 /*# sourceMappingURL=home.css.map */

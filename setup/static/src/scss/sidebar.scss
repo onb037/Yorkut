@@ -1,7 +1,7 @@
 .sidebar {
     height: 100%;
-    width: 220px;
-    max-width: 40vw;
+    width: 200px;
+    max-width: 30vw;
     padding: 30px 10px;
     position: fixed;
 
@@ -45,7 +45,7 @@
         
         height: 75%;
         list-style-type: none;
-        font-size: 20px;
+        font-size: 16px;
 
         .side-item {
             padding: 15px 10px;
@@ -59,10 +59,16 @@
 
             &:hover {
                 background-color: #0254be6c;
+
+                .side-icon {
+                    transform: scale(1.1);
+                }
             }
+
 
             .side-icon {
                 font-size: 28px;
+                transition: all ease 0.3s;
             }
         }
 
@@ -79,7 +85,7 @@
         gap: 5px;
         color: red;
         background-color: transparent;
-        font-size: 24px;
+        font-size: 16px;
         padding: 10px;
         transition: all ease 0.5s;
         border-radius: 5px;
