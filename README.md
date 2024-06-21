@@ -119,4 +119,4 @@ Yourkut é uma plataforma social onde você pode se conectar com amigos, compart
 - **Central de Ajuda:** Acesse a central de ajuda para obter respostas às perguntas frequentes.
 - **Contato com Suporte:** Envie uma solicitação de suporte caso precise de assistência adicional.
 
-Obrigado por escolher o Yourkut! Nossa equipe está comprometida em proporcionar a melhor experiência social possível.
+Obrigado por escolher o Yourkut. Nossa equipe está comprometida em proporcionar a melhor experiência social possível.
