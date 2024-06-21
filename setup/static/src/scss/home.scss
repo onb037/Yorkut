@@ -10,7 +10,6 @@
 
 body {
     min-height: 100vh;
-    height: 100vh;
     width: 100%;
 
     background: #181818;
@@ -22,5 +21,10 @@ body {
 // Sidebar
 @import './sidebar.scss';
 
+// Modal Comentarios
+@import './modal-comentario.scss';
+
 // Main (Bloco onde vai ter tudo menos a Sidebar)
 @import './home-main.scss';
+
+

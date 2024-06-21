@@ -1,0 +1,15 @@
+.modal-comentarios {
+    display: none;
+    max-width: 25%;
+    width: 25%;
+    border: 1px solid red;
+    position: fixed;
+    min-height: 100%;
+    top: 0;
+    right: 0;
+    overflow: hidden;
+}
+
+.modal-comentarios.ativo {
+    display: flex;
+}
