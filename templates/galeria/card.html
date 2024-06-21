@@ -78,60 +78,27 @@
                     </button>
                 </div>
             </div>
-
-            <div class="postagem" id="postagem">
-                <div class="cabecalho-post">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
-                    <div class="user-info-post amigo-info">   
-                        <span class="nome-post">Fulano</span>
-                        <span class="user-post amigo-user">User123</span>
-                    </div>
-                </div>
-                <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
-                <div class="text-post">
-                    <span class="user-post">user123</span>
-                    <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
-                </div>
-                <div class="acao-post">
-                    <button class="acao-btn">
-                        <span class="material-symbols-outlined icon-like">
-                            mood
-                            </span>
-                    </button>
-                    <button class="acao-btn">
-                            <span class="material-symbols-outlined icon-coment">
-                                chat
-                                </span>
-                    </button>
-                </div>
-            </div>
-
-            <div class="postagem" id="postagem">
-                <div class="cabecalho-post">
-                    <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
-                    <div class="user-info-post amigo-info">   
-                        <span class="nome-post">Fulano</span>
-                        <span class="user-post amigo-user">User123</span>
-                    </div>
-                </div>
-                <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
-                <div class="text-post">
-                    <span class="user-post">user123</span>
-                    <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
-                </div>
-                <div class="acao-post">
-                    <button class="acao-btn">
-                        <span class="material-symbols-outlined icon-like">
-                            mood
-                            </span>
-                    </button>
-                    <button class="acao-btn">
-                            <span class="material-symbols-outlined icon-coment">
-                                chat
-                                </span>
-                    </button>
-                </div>
-            </div>
+            {% for post in postagem %}
+    <div class="postagem" id="postagem">
+      <div class="cabecalho-post">
+        <img src="{% static './assets/perfis/' %}{{ posts.foto_perfil }}" alt="Foto do perfil do usuário">
+        <div class="user-info-post amigo-info">
+          <span class="nome-post">{{ post.autor.username }}</span>  <span class="user-post amigo-user">--</span>  </div>
+      </div>
+      <img class="imagem-post" id="imagem-post" src="{% static './assets/postagens/' %}{{ MEDIA_URL }}{{ posts.imagem }}" alt="Imagem do post">
+      <div class="text-post">
+        <span class="user-post">{{ post.autor.username }}</span>  <span class="legenda-post">{{ post.legenda }}</span>
+      </div>
+      <div class="acao-post">
+        <button class="acao-btn">
+          <span class="material-symbols-outlined icon-like">mood</span>
+        </button>
+        <button class="acao-btn">
+          <span class="material-symbols-outlined icon-coment">chat</span>
+        </button>
+      </div>
+    </div>
+  {% endfor %}
         </section>
     </main>
 {% endblock %}
