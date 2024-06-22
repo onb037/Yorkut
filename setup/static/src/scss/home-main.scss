@@ -49,7 +49,6 @@ main {
 
         .postagem {
             width: 100%;
-            min-height: 80vh;
             background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
             
             border-bottom: .1px solid transparent;
@@ -147,6 +146,10 @@ main {
                     }
 
 
+                }
+
+                .icon-like.ativo {
+                    color: yellow;
                 }
             }
         }
