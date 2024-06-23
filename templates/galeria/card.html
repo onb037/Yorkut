@@ -12,62 +12,71 @@
             <span class="material-symbols-outlined side-icon">
                 home
             </span>
-            <span class="side-text">Inicio</span>
+            <a href="" class="side-text">Inicio</a>
         </li>
         <li class="side-item">
             <span class="material-symbols-outlined side-icon">
                 search
             </span>
-            <span class="side-text">Pesquisa</span>
+            <a href="" class="side-text">Pesquisa</a>
         </li>
         <li class="side-item">
             <span class="material-symbols-outlined side-icon">
                 notifications
             </span>
-            <span class="side-text">Notificações</span>
+            <a href="" class="side-text">Notificações</a>
         </li>
         <li class="side-item">
             <span class="material-symbols-outlined side-icon">
                 group_add
             </span>
-            <span class="side-text">Amigos</span>
+            <a href="" class="side-text">Amigos</a>
         </li>
         <li class="side-item">
             <span class="material-symbols-outlined side-icon">
                 post_add
             </span>
-            <span class="side-text">Postar</span>
+            <a href="{% url 'postar' %}" class="side-text">Postar</a>
         </li>
         <li class="side-item">
             <span class="material-symbols-outlined side-icon">
                 person
             </span>
-            <span class="side-text">Perfil</span>
+            <a href="" class="side-text">Perfil</a>
         </li>
     </ul>
 
     <button class="sair" id="sair"><span class="material-symbols-outlined">
-        logout
+            logout
         </span>Sair</button>
 </div>
+
+<!-- Seção principal mano, aqui vai ter o contaneir pra aparecer os amigos e as postagens -->
 <main class="main" id="main">
+    <!-- container que vai aparecer os amigos, cada "amigo-info" e um amigo :) -->
     <section class="container-amigos">
         <div class="amigo-info">
-            <img src="https://medias.itatiaia.com.br/dims4/default/a1b9025/2147483647/strip/false/crop/592x592+138+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F62%2F39%2F48d3321f45c0a0486830d4fd5971%2Fwhatsapp-image-2024-04-12-at-10-48-39.jpeg" alt="" class="amigo-imagem">
+            <img src="https://medias.itatiaia.com.br/dims4/default/a1b9025/2147483647/strip/false/crop/592x592+138+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F62%2F39%2F48d3321f45c0a0486830d4fd5971%2Fwhatsapp-image-2024-04-12-at-10-48-39.jpeg"
+                alt="" class="amigo-imagem">
             <span class="amigo-user">ochicoin</span>
         </div>
     </section>
-    <section class="container-postagens">
 
+    <!-- container das postagens, cada "postagem" uma postagem -->
+    <section class="container-postagens">
+        <!-- auto explicativo as classe ne :) -->
         <div class="postagem" id="postagem">
             <div class="cabecalho-post">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvTNp33bnN4rL1z48GRpWNgAL22_6VY2Iqw&s" alt="" class="user-imagem amigo-imagem">
-                <div class="user-info-post amigo-info">   
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvTNp33bnN4rL1z48GRpWNgAL22_6VY2Iqw&s"
+                    alt="" class="user-imagem amigo-imagem">
+                <div class="user-info-post amigo-info">
                     <span class="nome-post">Neymar Jr.</span>
                     <span class="user-post amigo-user">neymarjr</span>
                 </div>
             </div>
-            <img class="imagem-post" id="imagem-post" src="https://veja.abril.com.br/wp-content/uploads/2023/08/NEYMAR-04_1.jpg.jpg?quality=90&strip=info&w=720&h=440&crop=1" alt="">
+            <img class="imagem-post" id="imagem-post"
+                src="https://veja.abril.com.br/wp-content/uploads/2023/08/NEYMAR-04_1.jpg.jpg?quality=90&strip=info&w=720&h=440&crop=1"
+                alt="">
             <div class="text-post">
                 <span class="user-post">neymarjr</span>
                 <span class="legenda-post">Silêncio Haters😛😜🤫</span>
@@ -76,55 +85,90 @@
                 <button class="acao-btn btn-like" title="Curtir">
                     <span class="material-symbols-outlined icon-like">
                         sentiment_neutral
-                        </span>
+                    </span>
                 </button>
                 <button class="acao-btn btn-coment" title="Comentar">
-                        <span class="material-symbols-outlined icon-coment">
-                            chat
-                            </span>
+                    <span class="material-symbols-outlined icon-coment">
+                        chat
+                    </span>
                 </button>
             </div>
         </div>
 
         <div class="postagem" id="postagem">
             <div class="cabecalho-post">
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg" alt="" class="user-imagem amigo-imagem">
-                <div class="user-info-post amigo-info">   
+                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                    alt="" class="user-imagem amigo-imagem">
+                <div class="user-info-post amigo-info">
                     <span class="nome-post">Fulano</span>
                     <span class="user-post amigo-user">User123</span>
                 </div>
             </div>
-            <img class="imagem-post" id="imagem-post" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
+            <img class="imagem-post" id="imagem-post"
+                src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="">
             <div class="text-post">
                 <span class="user-post">user123</span>
-                <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla natus consequatur, nihil eum corrupti reprehenderit.</span>
+                <span class="legenda-post">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Rem unde, dolor
+                    eveniet eius dolore nostrum enim doloremque fuga facilis quibusdam eligendi iure sapiente nulla
+                    natus consequatur, nihil eum corrupti reprehenderit.</span>
             </div>
             <div class="acao-post">
                 <button class="acao-btn btn-like" title="Curtir">
                     <span class="material-symbols-outlined icon-like">
                         sentiment_neutral
-                        </span>
+                    </span>
                 </button>
                 <button class="acao-btn btn-coment" title="Comentar">
-                        <span class="material-symbols-outlined icon-coment">
-                            chat
-                        </span>
+                    <span class="material-symbols-outlined icon-coment">
+                        chat
+                    </span>
                 </button>
             </div>
         </div>
     </section>
 </main>
-<div class="modal-comentarios" id="modal-comentarios">
-    <div class="postar-comentario">
 
+<!-- Seção pro Comentario das publicações -->
+<div class="modal-comentarios" id="modal-comentarios">
+    <button class="fechar-modal-comentario" id="btn-fechar-modal"><span
+            class="material-symbols-outlined">close</span></button>
+    <!-- Aqui onde o usuario vai fazer o comentario -->
+    <div class="postar-comentario">
+        <div class="amigo-info my-info">
+            <img src="https://conteudo.imguol.com.br/c/esporte/02/2024/06/13/kylian-mbappe-durante-jogo-da-selecao-francesa-1718298463535_v2_450x450.jpg"
+                alt="" class="amigo-imagem">
+            <span class="amigo-user my-user">jeanaraga</span>
+        </div>
+        <form action="" class="comentario-form">
+            <textarea name="" id="comentario-textarea" placeholder="Faca um comentario..."></textarea>
+            <button>Enviar</button>
+        </form>
     </div>
+    <!-- Aqui é onde vai estar os comentarios ja feito -->
     <div class="outros-comentarios">
+        <!-- Cada "comentario" é um comentario :) -->
         <div class="comentario">
-            <div class="amigo-info">
-                <img src="" alt="" class="amigo-imagem">
+            <div class="amigo-info user-info">
+                <img src="https://medias.itatiaia.com.br/dims4/default/a1b9025/2147483647/strip/false/crop/592x592+138+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F62%2F39%2F48d3321f45c0a0486830d4fd5971%2Fwhatsapp-image-2024-04-12-at-10-48-39.jpeg"
+                    alt="" class="amigo-imagem">
                 <span class="amigo-user">ochicoin</span>
             </div>
-            <div class="text-comentario">Eu tentei</div>
+            <div class="text-comentario">
+                <p>Eu tentei!</p>
+            </div>
+        </div>
+        <div class="comentario">
+            <div class="amigo-info user-info">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnaCx2Bxs23Hgqx4Q1-6HUzK8qYTgvmIgOw&s"
+                    alt="" class="amigo-imagem">
+                <span class="amigo-user">mccabelin</span>
+            </div>
+            <div class="text-comentario">
+                <p>Oi fofoca, cê deixa pra quem não faz as nota
+                    No corre o bigode, sei que porta
+                    Falador passa mal, quer nois de novo
+                    Fartura vai ver nós no desenrolo</p>
+            </div>
         </div>
     </div>
 </div>
