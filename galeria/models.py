@@ -1,15 +1,11 @@
 from django.db import models
+from django.contrib.auth import get_user_model
 
-# Create your models here.
-#nicollas cago com o codigo
-
-class Usuarios(models.Model):
-    nome = models.CharField(max_length=100, null=False, blank=False)
-    nomeUsuario = models.CharField(max_length=255, unique=True)
-    email = models.EmailField(max_length=255, unique=True)
-    # Armazene a senha com hash e sal
-    senha = models.CharField(max_length=128)
-
-    def __str__(self) -> str:
-        return f'Nome [nome={self.nome}]'
-
+class Post(models.Model):
+    autor = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    foto_perfil = models.ImageField(upload_to='perfis', blank=True)
+    nome_usuario = models.CharField(max_length=255, blank=True)
+    imagem = models.ImageField(upload_to='postagens', blank=True)
+    legenda = models.TextField()
+    data_hora_criacao = models.DateTimeField(auto_now_add=True)
+    curtidas = models.IntegerField(default=0)
