@@ -24,6 +24,11 @@
                 <h1>Cadastre-se</h1>
                 <p>Veja o que seus amigos estão fazendo</p>
             </div>
+            {% for message in messages %}
+            <div>
+             <p id="messages">{{message}}</p>
+            </div>
+            {% endfor %}
 
             <form action="{% url 'cadastro' %}" method="POST" class="formulario">
                 {% csrf_token %}

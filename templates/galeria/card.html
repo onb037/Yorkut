@@ -52,11 +52,16 @@
         </li>
     </ul>
 
-    <button class="sair" id="sair"><span class="material-symbols-outlined">
+    <button class="sair" id="sair"><span href="{% url 'logout' %}" class="material-symbols-outlined">
             logout
         </span>Sair</button>
 </div>
 
+{% for message in messages %}
+<div>
+        <p id="messages">{{message}}</p>
+</div>
+{% endfor %}
 <!-- Seção principal mano, aqui vai ter o contaneir pra aparecer os amigos e as postagens -->
 <main class="main" id="main">
     <!-- container que vai aparecer os amigos, cada "amigo-info" e um amigo :) -->
@@ -74,9 +79,9 @@
           <div class="postagem" id="postagem">
             <div class="cabecalho-post">
               {% if post.autor.foto_perfil %}
-                <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
+                <img src="{{ post.autor.foto_perfil }}" alt="" class="user-imagem amigo-imagem">
               {% else %}
-                <img src="https://static.vecteezy.com/system/resources/thumbnails/009/292/244/small/default-avatar-icon-of-social-media-user-vector.jpg"
+                <img src="{{ post.autor.foto_perfil }}"
                     alt="" class="user-imagem amigo-imagem">
               {% endif %}
               <div class="user-info-post amigo-info">
@@ -84,7 +89,9 @@
                 <span class="user-post amigo-user">{{ post.autor.username }}</span>
               </div>
             </div>
-            <img class="imagem-post" id="imagem-post" src="{{ post.imagem.url }}" alt="">
+            <img class="imagem-post" id="imagem-post"
+            src="{% if post.imagem %}{{ post.imagem.url }}{% else %}{% static 'default_image.jpg' %}{% endif %}"
+            alt="">
             <div class="text-post">
               <span class="user-post">{{ post.autor.username }}</span>
               <span class="legenda-post">{{ post.legenda }}</span>
