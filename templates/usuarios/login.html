@@ -30,6 +30,12 @@
                 <h2>Login</h2>
                 <span>Preencha todos os campos!</span>
             </div>
+            {% for message in messages %}
+            <div>
+             <p id="messages">{{message}}</p>
+            </div>
+            {% endfor %}
+            
 
             <form action="{% url 'login' %}" method="POST" class="formulario">
                 {% csrf_token %}

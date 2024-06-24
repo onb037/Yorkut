@@ -68,3 +68,7 @@ def cadastro(request):
 def postar(request):
      return render(request,'usuarios/pages/postar.html')
          
+def logout(request):
+     auth.logout(request)
+     messages.success(request, "Deslogado com sucesso!")
+     return redirect('login')
