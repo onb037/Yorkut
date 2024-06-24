@@ -1,6 +1,12 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
+<div id="loading-screen">
+    <div class="spinner"></div>
+    <p>Carregando...</p>
+</div>
+<script src="{% static './src/js/loading-screen.js'%}"></script>
+
 <div class="sidebar">
     <div class="logo">
         <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">

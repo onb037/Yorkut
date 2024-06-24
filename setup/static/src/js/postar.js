@@ -13,3 +13,4 @@ document.getElementById('enviarImagem').addEventListener('change', function (eve
         reader.readAsDataURL(file);
     }
 });
+
