@@ -10,6 +10,7 @@
 
 body {
     min-height: 100vh;
+    height: 100vh;
     width: 100%;
 
     background: #181818;
@@ -17,16 +18,11 @@ body {
     flex-direction: row;
 }
 
-
 // Sidebar
 @import './sidebar.scss';
 
-// Modal Comentarios
-@import './modal-comentario.scss';
-
-// Main (Bloco onde vai ter tudo menos a Sidebar)
-@import './home-main.scss';
-
+// Container Principal
+@import './postar-main.scss';
 
 // Carregar Tela
 @import './loading-tela.scss';

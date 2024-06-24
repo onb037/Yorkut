@@ -66,7 +66,5 @@ def cadastro(request):
 
 
 def postar(request):
-     
-
      return render(request,'usuarios/pages/postar.html')
          
