@@ -1,15 +1,86 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
-    <link rel="stylesheet" href="{% static './src/css/home.css'%}">
+    <link rel="stylesheet" href="{% static './src/css/postar.css'%}">
     <link rel="icon" href="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" type="image/x-icon">
     <title>Bem-Vindo ao Yorkut</title>
 </head>
 <body>
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
+            <span>Yourkut</span>
+        </div>
     
+        <ul class="side-items">
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    home
+                </span>
+                <a href="{% url 'card' %}" class="side-text">Inicio</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    search
+                </span>
+                <a href="" class="side-text">Pesquisa</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    notifications
+                </span>
+                <a href="" class="side-text">Notificações</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    group_add
+                </span>
+                <a href="" class="side-text">Amigos</a>
+            </li>
+            <li class="side-item ativo">
+                <span class="material-symbols-outlined side-icon">
+                    post_add
+                </span>
+                <a href="{% url 'postar' %}" class="side-text">Postar</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    person
+                </span>
+                <a href="" class="side-text">Perfil</a>
+            </li>
+        </ul>
+    
+        <button class="sair" id="sair"><span class="material-symbols-outlined">
+                logout
+            </span>Sair</button>
+    </div>
+    <main class="main" id="main">
+        <h1>Criar nova publicação!</h1>
+        <div class="criar-postagem" id="criar-postagem">
+            <img class="imagem-preview" id="imagem-preview" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="Preview da Imagem" >
+            <form action="" class="form-postagem">
+                <div class="usuario-info amigo-info">
+                    <img src="https://medias.itatiaia.com.br/dims4/default/a1b9025/2147483647/strip/false/crop/592x592+138+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F62%2F39%2F48d3321f45c0a0486830d4fd5971%2Fwhatsapp-image-2024-04-12-at-10-48-39.jpeg"
+                        alt="" class="amigo-imagem">
+                    <span class="amigo-user">ochicoin</span>
+                </div>
+                <div class="input-box">
+                    <label for="enviarImagem" class="label-enviar-imagem">Escolher Imagem</label>
+                    <input class="input-imagem" type="file" name="enviarImagem" id="enviarImagem" required>
+                    <label for="legenda-postagem" class="label-legenda">Legenda</label>
+                    <textarea name="legenda-postagem" id="legenda-postagem"
+                        placeholder="Escreva uma Legenda!"></textarea>
+                </div>
+                <button type="submit">Postar</button>
+            </form>
+        </div>
+    </main>
+
+    <script src="{% static './src/js/postar.js' %}"></script>
 </body>
 </html>

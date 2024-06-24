@@ -1,0 +1,223 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+  background: #181818;
+  display: flex;
+  flex-direction: row;
+}
+
+.sidebar {
+  height: 100%;
+  width: 200px;
+  max-width: 30vw;
+  padding: 30px 10px;
+  position: fixed;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(24, 24, 24, 0.2117647059);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #fff;
+}
+.sidebar .logo {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  gap: 5px;
+}
+.sidebar .logo img {
+  width: 30%;
+  height: auto;
+}
+.sidebar .logo span {
+  font-size: 20px;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  color: #004aad;
+  margin-bottom: 5px;
+}
+.sidebar .side-items {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  height: 75%;
+  list-style-type: none;
+  font-size: 16px;
+}
+.sidebar .side-items .side-item {
+  padding: 15px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+}
+.sidebar .side-items .side-item:hover {
+  background-color: rgba(2, 84, 190, 0.4235294118);
+}
+.sidebar .side-items .side-item:hover .side-icon {
+  transform: scale(1.1);
+}
+.sidebar .side-items .side-item .side-text {
+  text-decoration: none;
+  color: #fff;
+}
+.sidebar .side-items .side-item .side-icon {
+  font-size: 28px;
+  transition: all ease 0.3s;
+}
+.sidebar .side-items .side-item.ativo {
+  font-weight: bold;
+}
+.sidebar .sair {
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: start;
+  gap: 5px;
+  color: red;
+  background-color: transparent;
+  font-size: 16px;
+  padding: 10px;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sidebar .sair:hover {
+  background-color: rgba(253, 69, 69, 0.192);
+}
+.sidebar .sair span {
+  color: red;
+}
+
+main {
+  width: calc(75% - 200px);
+  height: 100%;
+  padding: 25px;
+  margin-left: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+main h1 {
+  color: #fff;
+  font-weight: 500;
+}
+main .criar-postagem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  padding: 20px;
+}
+main .criar-postagem .imagem-preview {
+  width: 55%;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+main .criar-postagem .form-postagem {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  gap: 5px;
+  color: #000;
+  background: rgba(204, 204, 204, 0.6039215686);
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid blue;
+}
+main .criar-postagem .form-postagem .usuario-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 100px;
+  min-width: 100px;
+  cursor: pointer;
+}
+main .criar-postagem .form-postagem .usuario-info .amigo-imagem {
+  width: 60px;
+  height: 60%;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+}
+main .criar-postagem .form-postagem .usuario-info .amigo-user {
+  text-transform: lowercase;
+  color: #000;
+  font-size: 14px;
+}
+main .criar-postagem .form-postagem .input-box {
+  display: flex;
+  flex-direction: column;
+}
+main .criar-postagem .form-postagem .input-box .label-enviar-imagem {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 20px;
+  border: 2px solid #004aad;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-bottom: 20px;
+}
+main .criar-postagem .form-postagem .input-box .label-enviar-imagem:hover {
+  background-color: #eee;
+  color: #181818;
+}
+main .criar-postagem .form-postagem .input-box .input-imagem {
+  display: none;
+}
+main .criar-postagem .form-postagem .input-box textarea {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  resize: none;
+  border: 1px solid #ccc;
+  margin-bottom: 20px;
+}
+main .criar-postagem .form-postagem .input-box textarea:focus {
+  outline: 2px solid #004aad;
+}
+main .criar-postagem .form-postagem .input-box .label-legenda {
+  margin-bottom: 10px;
+}
+main .criar-postagem .form-postagem button {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #004aad;
+  background-color: transparent;
+  color: #000;
+  font-size: 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background ease 0.5s;
+}
+main .criar-postagem .form-postagem button:hover {
+  background: linear-gradient(90deg, #004aad, #40c9ff);
+}
+
+/*# sourceMappingURL=postar.css.map */
