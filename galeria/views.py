@@ -44,3 +44,6 @@ def editar_post(request):
 
 def apagar_post(request):
     pass
+
+def verpost(request):
+    return render(request, 'galeria/pages/ver-post.html')
