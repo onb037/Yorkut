@@ -1,0 +1,75 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static './src/css/postar.css'%}">
+    <link rel="icon" href="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" type="image/x-icon">
+    <title>Bem-Vindo ao Yorkut</title>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+    <script src="{% static './src/js/loading-screen.js'%}"></script>
+
+    
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
+            <span>Yourkut</span>
+        </div>
+    
+        <ul class="side-items">
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    home
+                </span>
+                <a href="{% url 'card' %}" class="side-text">Inicio</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    search
+                </span>
+                <a href="" class="side-text">Pesquisa</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    notifications
+                </span>
+                <a href="" class="side-text">Notificações</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    group_add
+                </span>
+                <a href="" class="side-text">Amigos</a>
+            </li>
+            <li class="side-item ativo">
+                <span class="material-symbols-outlined side-icon">
+                    post_add
+                </span>
+                <a href="{% url 'postar' %}" class="side-text">Postar</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    person
+                </span>
+                <a href="" class="side-text">Perfil</a>
+            </li>
+        </ul>
+    
+        <button class="sair" id="sair"><span class="material-symbols-outlined">
+                logout
+            </span>Sair</button>
+    </div>
+    <main class="main" id="main">
+
+    </main>
+
+    <script src="{% static './src/js/postar.js' %}"></script>
+</body>
+</html>

@@ -1,11 +1,13 @@
 {% extends 'galeria/base.html' %}
 {% load static %}
 {% block content %}
+<!-- Tela de Carregamento -->
 <div id="loading-screen">
     <div class="spinner"></div>
     <p>Carregando...</p>
 </div>
 <script src="{% static './src/js/loading-screen.js'%}"></script>
+
 
 <div class="sidebar">
     <div class="logo">
@@ -62,6 +64,8 @@
         <p id="messages">{{message}}</p>
 </div>
 {% endfor %}
+
+
 <!-- Seção principal mano, aqui vai ter o contaneir pra aparecer os amigos e as postagens -->
 <main class="main" id="main">
     <!-- container que vai aparecer os amigos, cada "amigo-info" e um amigo :) -->
@@ -114,48 +118,64 @@
       
 </main>
 
-<!-- Seção pro Comentario das publicações -->
-<div class="modal-comentarios" id="modal-comentarios">
-    <button class="fechar-modal-comentario" id="btn-fechar-modal"><span
-            class="material-symbols-outlined">close</span></button>
-    <!-- Aqui onde o usuario vai fazer o comentario -->
-    <div class="postar-comentario">
-        <div class="amigo-info my-info">
-            <img src="https://conteudo.imguol.com.br/c/esporte/02/2024/06/13/kylian-mbappe-durante-jogo-da-selecao-francesa-1718298463535_v2_450x450.jpg"
-                alt="" class="amigo-imagem">
-            <span class="amigo-user my-user">jeanaraga</span>
+    <!-- Aqui é onde vai ter um mini perfil e sugestão de amigos -->
+    <section class="container-lateral" id="container-lateral">
+        <div class="seu-perfil box">
+            <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" alt="" class="sua-imagem-perfil">
+            <div class="seus-info-perfil">
+                <span class="seu-nome-perfil">Seu Nome</span>
+                <span class="seu-user-perfil">SeuUser</span>
+            </div>
+            <a href="" class="btn-config">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </a>
         </div>
-        <form action="" class="comentario-form">
-            <textarea name="" id="comentario-textarea" placeholder="Faca um comentario..."></textarea>
-            <button>Enviar</button>
-        </form>
-    </div>
-    <!-- Aqui é onde vai estar os comentarios ja feito -->
-    <div class="outros-comentarios">
-        <!-- Cada "comentario" é um comentario :) -->
-        <div class="comentario">
-            <div class="amigo-info user-info">
-                <img src="https://medias.itatiaia.com.br/dims4/default/a1b9025/2147483647/strip/false/crop/592x592+138+0/resize/1000x1000!/quality/90/?url=https%3A%2F%2Fk2-prod-radio-itatiaia.s3.us-east-1.amazonaws.com%2Fbrightspot%2F62%2F39%2F48d3321f45c0a0486830d4fd5971%2Fwhatsapp-image-2024-04-12-at-10-48-39.jpeg"
-                    alt="" class="amigo-imagem">
-                <span class="amigo-user">ochicoin</span>
-            </div>
-            <div class="text-comentario">
-                <p>Eu tentei!</p>
+
+        <div class="container-sugestao box">
+            <h3>Seja amigos deles também!</h3>
+            <div class="perfis-sugestao">
+                <!-- Cada perfil-sugestao é um perfil -->
+                <div class="perfil-sugestao">
+                    <img src="https://www.netflu.com.br/futebol-internacional/wp-content/uploads/2024/03/mbappe1-1.jpg" alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Kylian Mbappé</span>
+                        <span class="user">k.Mbappe</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
+                <div class="perfil-sugestao">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1rrfWwm41mgIxG1ZZWqaeRfA8LjVe9i4lg&s" alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Vinicius Jr.</span>
+                        <span class="user">vinijr</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
+                <div class="perfil-sugestao">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-UY5Vo9hk2V1V7ZG_4bnaw_mY1bV1YxuGA&s" alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Rodrygo Goes</span>
+                        <span class="user">rodrygogoes</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
             </div>
         </div>
-        <div class="comentario">
-            <div class="amigo-info user-info">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSnnaCx2Bxs23Hgqx4Q1-6HUzK8qYTgvmIgOw&s"
-                    alt="" class="amigo-imagem">
-                <span class="amigo-user">mccabelin</span>
-            </div>
-            <div class="text-comentario">
-                <p>Oi fofoca, cê deixa pra quem não faz as nota
-                    No corre o bigode, sei que porta
-                    Falador passa mal, quer nois de novo
-                    Fartura vai ver nós no desenrolo</p>
-            </div>
-        </div>
-    </div>
-</div>
+    </section>
+
+
 {% endblock %}

@@ -15,6 +15,36 @@ body {
   flex-direction: row;
 }
 
+#loading-screen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  height: 100%;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#loading-screen .spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
 .sidebar {
   height: 100%;
   width: 200px;
@@ -265,6 +295,11 @@ main {
   flex-direction: column;
   align-items: center;
 }
+@media screen and (max-width: 920px) {
+  main {
+    min-width: 70vw;
+  }
+}
 main .container-amigos {
   max-width: 100%;
   width: 100%;
@@ -332,6 +367,7 @@ main .container-postagens .postagem .cabecalho-post .user-info-post {
 main .container-postagens .postagem .cabecalho-post .user-info-post .nome-post {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
+  text-transform: capitalize;
 }
 main .container-postagens .postagem .cabecalho-post .user-info-post .user-post {
   font-size: 10px;
@@ -386,34 +422,119 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   color: yellow;
 }
 
-#loading-screen {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 9999;
+.container-lateral {
+  width: 25%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-left: 0.5px solid transparent;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(24, 24, 24, 0.2117647059);
+  padding: 25px;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .container-lateral {
+    display: none;
+  }
+}
+.container-lateral .box {
   width: 100%;
-  height: 100%;
-  background: #ccc;
+  min-height: 50px;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #fff;
+}
+.container-lateral .seu-perfil {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container-lateral .seu-perfil .sua-imagem-perfil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+  margin-right: 10px;
+}
+.container-lateral .seu-perfil .seus-info-perfil {
+  display: flex;
+  flex-direction: column;
+}
+.container-lateral .seu-perfil .seus-info-perfil .seu-user-perfil {
+  color: #ccc;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.container-lateral .seu-perfil .btn-config {
+  position: absolute;
+  right: 0;
+  top: 50;
+  margin: 10px;
+  text-decoration: none;
+  color: #808080;
+  font-size: 24px;
+  transition: all ease 0.3s;
+}
+.container-lateral .seu-perfil .btn-config:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+.container-lateral .container-sugestao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-lateral .container-sugestao h3 {
+  font-size: 20px;
+}
+.container-lateral .container-sugestao .perfis-sugestao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao {
+  display: flex;
+  padding: 10px 0px;
+  gap: 10px;
+  position: relative;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .perfil-sugestao-imagem {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao {
+  display: flex;
+  flex-direction: column;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #ccc;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo {
+  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-}
-#loading-screen .spinner {
-  border: 16px solid #f3f3f3;
-  border-top: 16px solid #3498db;
   border-radius: 50%;
-  width: 100px;
-  height: 100px;
-  animation: spin 2s linear infinite;
+  background-color: #fff;
+  color: #004aad;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50;
+  transition: all ease 0.3s;
 }
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
+  transform: scale(1.1);
 }
 
 /*# sourceMappingURL=home.css.map */

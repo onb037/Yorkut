@@ -17,6 +17,9 @@ body {
     flex-direction: row;
 }
 
+// Carregar Tela
+@import './loading-tela.scss';
+
 
 // Sidebar
 @import './sidebar.scss';
@@ -27,6 +30,7 @@ body {
 // Main (Bloco onde vai ter tudo menos a Sidebar)
 @import './home-main.scss';
 
+// Container Lateral
+@import './container-lateral.scss';
 
-// Carregar Tela
-@import './loading-tela.scss';
+
