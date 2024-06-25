@@ -1,0 +1,47 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="icon" href="../logo/Y-corrigida-removebg-preview.png" type="image/x-icon">
+    <link rel="stylesheet" href="{% static './src/css/redefinir.css' %}">
+    <title>Yorkut</title>
+</head>
+<body>
+    <div class="botao-noturno" id="botao-noturno">
+        <span class="material-symbols-outlined" id="icon-mode">
+            light_mode
+            </span>
+    </div>
+
+
+    <div class="container-redefinir">
+        <img class="imagem-redefinir" src="https://cdn-icons-png.flaticon.com/512/3208/3208742.png" alt="">
+        <div class="text-redefinir">
+            <h2>Problemas para entrar?</h2>
+            <p>Insira o seu email, e enviaremos uma nova senha para você voltar a acessar a sua conta.</p>
+        </div>
+        <form action="" class="form-redefinir">
+            <label for="redefinir-email">Email:</label>
+            <input type="email" name="redefinir-email" id="redefinir-email">
+
+            <button>Enviar nova senha</button>
+        </form>
+        <div class="voltar-inicio">
+            <a href="{% url 'login' %}" id="btn-voltar-inicio" ><span class="material-symbols-outlined">
+                arrow_back
+                </span></a>
+                <a href="{% url 'login' %}" class="label">Voltar para o inicio!</a>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy;Yorkut 2024</p>
+    </footer>
+
+    <script src="{% static './src/js/main.js'%}"></script>
+</body>
+</html>
