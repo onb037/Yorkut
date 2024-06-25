@@ -37,12 +37,13 @@ body {
   color: #fff;
   position: relative;
   box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+  transition: all ease 0.5s;
 
   .imagem-redefinir {
     width: 100px;
     height: 100px;
     margin-bottom: 20px;
-    filter: drop-shadow(5px 5px 10px #000000);
+    filter: drop-shadow(5px 5px 10px #00000054);
   }
 
   .text-redefinir {
@@ -146,6 +147,9 @@ body {
 
 
 }
+
+// Tela de Carregamento
+@import './loading-tela.scss';
 
 @keyframes colors {
   0% {

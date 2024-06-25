@@ -1,0 +1,276 @@
+#main {
+    width: calc(75% - 200px);
+    height: 100%;
+    padding: 25px;
+    margin: 0 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media screen and (max-width: 920px) {
+        min-width: 70vw;
+    }
+
+    #header {
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        .btn-voltar {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 20px;
+            color: #fff;
+            text-decoration: none;
+
+            .icon {
+                font-size: 24px;
+                padding: 10px;
+                background-color: #fff;
+                color: #004aad;
+                border-radius: 50%;
+            }
+        }
+
+    }
+
+    .container-postagens {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+
+        .postagem {
+            width: 90%;
+            background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+            
+            border-bottom: .1px solid transparent;
+            padding: 20px 0;
+    
+    
+            .cabecalho-post {
+                width: 100%;
+                min-height: 15%;
+                padding: 10px 5px;
+                display: flex;
+                align-items: center;
+                gap: 8px;
+                color: #fff;
+    
+                .user-imagem {
+                    height: 50px;
+                    width: 50px;
+                    border-radius: 50%;
+                    background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+                    border: 2px solid transparent;
+                    cursor: pointer;
+                }
+    
+                .user-info-post {
+                    display: flex;
+                    flex-direction: column;
+                    cursor: pointer;
+    
+                    .nome-post {
+                        font-size: 16px;
+                        font-family: 'Montserrat',sans-serif;
+                    }
+    
+                    .user-post {
+                        font-size: 10px;
+                        color: #b4b4b4;
+                        text-transform: lowercase;
+                    }
+                }
+            }
+    
+            .imagem-post {
+                min-width: 100%;
+                max-width: 100%;
+                height: auto;
+                border-radius: 4px;
+            }
+    
+            .text-post {
+                width: 100%;
+                color: #fff;
+                padding: 5px;
+    
+                .user-post {
+                    text-transform: lowercase;
+                    font-size: 14px;
+                    font-weight: bold;
+                }
+    
+                .legenda-post {
+                    font-size: 13px;
+                    color: #d8d8d8;
+                }
+            }
+    
+            .acao-post {
+                display: flex;
+                gap: 10px;
+    
+                .acao-btn {
+                    font-size: 32px;
+                    cursor: pointer;
+                    display: flex;
+                    background-color: transparent;
+                    border: none;
+                    padding: 5px;
+                    transition: all ease;
+                    color: #004aad;
+    
+                    &:active {
+                        transform: scale(1.3);
+                    }
+    
+    
+    
+                    span {
+                        font-size: 32px;
+                        
+                        transition: all ease .5s;
+    
+                        &:hover {
+                            color: #faf768;
+                        }
+                    }
+    
+    
+                }
+    
+                .icon-like.ativo {
+                    color: yellow;
+                }
+            }
+        }
+
+        .ver-comentario {
+            display: flex;
+            flex-direction: column;
+            width: 90%;
+
+            .fazer-comentario {
+                padding: 10px;
+                display: flex;
+                align-items: center;
+                width: 100%;
+                height: 100px;
+                position: relative;
+                background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+                border-bottom: 1px solid transparent;
+
+                .suas-info {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-right: 20px;
+                    
+                    .sua-imagem {
+                        height: 50px;
+                        width: 50px;
+                        border-radius: 50%;
+                        background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+                        border: 2px solid transparent;
+                    }
+
+                    .seu-user {
+                        font-size: 12px;
+                        color: #ccc;
+                        text-transform: lowercase;
+                    }
+                }
+
+                #fazer-comentario {
+                    width: 70%;
+                    max-width: 70%;
+                    max-height: 100%;
+                    overflow: auto;
+                    padding: 5px;
+                    text-align: start;
+                    background: transparent;
+                    resize: none;
+                    border: none;
+                    color: #fff;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+                button {
+                    font-size: 14px;
+                    background-color: #fff;
+                    color: #004aad;
+                    padding: 10px 20px;
+                    border-radius: 20px;
+                    height: auto;
+                    position: absolute;
+                    right: 0;
+                    top: 50;
+                    margin: 10px;
+                    border: none;
+                    cursor: pointer;
+                    transition: all ease 0.5s;
+
+
+                    &:hover {
+                        background-color: #004aad;
+                        color: #fff;
+                    }
+                }
+            }
+
+            .outros-comentario {
+                padding: 10px;
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                position: relative;
+
+                .comentario {
+                    display: flex;
+                    padding: 20px 0px;
+
+                    .info-usuario {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        gap: 5px;
+                        max-width: 100px;
+                        margin-right: 20px;
+                        overflow: hidden;
+
+                        .imagem {
+                            height: 50px;
+                            width: 50px;
+                            border-radius: 50%;
+                            background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+                            border: 2px solid transparent;
+                        }
+
+                        .user {
+                            text-transform: lowercase;
+                            color: #fff;
+                            font-size: 12px;
+                        }
+                    }
+
+                    .texto {
+                        font-size: 14px;
+                        color: #b4b4b4;
+                        width: 80%;
+                        max-height: 120px;
+                        text-align: start;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

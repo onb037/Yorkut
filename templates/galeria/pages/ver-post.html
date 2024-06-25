@@ -1,0 +1,202 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="{% static './src/css/ver-post.css'%}">
+    <link rel="icon" href="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" type="image/x-icon">
+    <title>Bem-Vindo ao Yorkut</title>
+</head>
+<body>
+    <div id="loading-screen">
+        <div class="spinner"></div>
+        <p>Carregando...</p>
+    </div>
+    <script src="{% static './src/js/loading-screen.js'%}"></script>
+
+    
+    <div class="sidebar">
+        <div class="logo">
+            <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
+            <span>Yourkut</span>
+        </div>
+    
+        <ul class="side-items">
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    home
+                </span>
+                <a href="{% url 'card' %}" class="side-text">Inicio</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    search
+                </span>
+                <a href="" class="side-text">Pesquisa</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    notifications
+                </span>
+                <a href="" class="side-text">Notificações</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    group_add
+                </span>
+                <a href="" class="side-text">Amigos</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    post_add
+                </span>
+                <a href="{% url 'postar' %}" class="side-text">Postar</a>
+            </li>
+            <li class="side-item">
+                <span class="material-symbols-outlined side-icon">
+                    person
+                </span>
+                <a href="" class="side-text">Perfil</a>
+            </li>
+        </ul>
+    
+        <button class="sair" id="sair"><span class="material-symbols-outlined">
+                logout
+            </span>Sair</button>
+    </div>
+
+
+    <main class="main" id="main">
+        <div class="header" id="header">
+            <a href="" class="btn-voltar">
+                <span class="material-symbols-outlined icon">
+                    arrow_back
+                </span>
+                <span>Voltar</span>
+            </a>
+        </div>
+
+        <div class="container-postagens">
+            <!-- auto explicativo as classe ne :) -->
+            <div class="postagem" id="postagem">
+                <div class="cabecalho-post">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvTNp33bnN4rL1z48GRpWNgAL22_6VY2Iqw&s"
+                        alt="" class="user-imagem amigo-imagem">
+                    <div class="user-info-post amigo-info">
+                        <span class="nome-post">Neymar Jr.</span>
+                        <span class="user-post amigo-user">neymarjr</span>
+                    </div>
+                </div>
+                <img class="imagem-post" id="imagem-post"
+                    src="https://veja.abril.com.br/wp-content/uploads/2023/08/NEYMAR-04_1.jpg.jpg?quality=90&strip=info&w=720&h=440&crop=1"
+                    alt="">
+                <div class="text-post">
+                    <span class="user-post">neymarjr</span>
+                    <span class="legenda-post">Silêncio Haters😛😜🤫</span>
+                </div>
+                <div class="acao-post">
+                    <button class="acao-btn btn-like" title="Curtir">
+                        <span class="material-symbols-outlined icon-like">
+                            sentiment_neutral
+                        </span>
+                    </button>
+                    <button class="acao-btn btn-coment" title="Comentar">
+                        <span class="material-symbols-outlined icon-coment">
+                            chat
+                        </span>
+                    </button>
+                </div>
+            </div>
+            <div class="ver-comentario">
+                <form class="fazer-comentario">
+                    <div class="suas-info">
+                        <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" alt="" class="sua-imagem">
+                        <span class="seu-user">seusuer</span>
+                    </div>
+
+                    <textarea name="" id="fazer-comentario" placeholder="Faça um comentario"></textarea>
+                    <button>Comentar</button>
+                </form>
+                
+                <div class="outros-comentario">
+                    <div class="comentario">
+                        <div class="info-usuario">
+                            <img src="https://media.gettyimages.com/id/1428217516/pt/foto/harrison-new-jersey-lionel-messi-of-argentina-celebrates-his-goal-in-the-second-half-against.jpg?s=594x594&w=gi&k=20&c=XlVFHsrAsceFqNBJAAv1zT1KRU8fVNkGct9D1lb8SJ8=" alt="" class="imagem">
+                            <span class="user">messi</span>
+                        </div>
+                        <p class="texto">Te amo ney😍.</p>
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Aqui é onde vai ter um mini perfil e sugestão de amigos -->
+    <section class="container-lateral" id="container-lateral">
+        <div class="seu-perfil box">
+            <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" alt=""
+                class="sua-imagem-perfil">
+            <div class="seus-info-perfil">
+                <span class="seu-nome-perfil">Seu Nome</span>
+                <span class="seu-user-perfil">SeuUser</span>
+            </div>
+            <a href="" class="btn-config">
+                <span class="material-symbols-outlined">
+                    settings
+                </span>
+            </a>
+        </div>
+
+        <div class="container-sugestao box">
+            <h3>Seja amigos deles também!</h3>
+            <div class="perfis-sugestao">
+                <!-- Cada perfil-sugestao é um perfil -->
+                <div class="perfil-sugestao">
+                    <img src="https://www.netflu.com.br/futebol-internacional/wp-content/uploads/2024/03/mbappe1-1.jpg"
+                        alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Kylian Mbappé</span>
+                        <span class="user">k.Mbappe</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
+                <div class="perfil-sugestao">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1rrfWwm41mgIxG1ZZWqaeRfA8LjVe9i4lg&s"
+                        alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Vinicius Jr.</span>
+                        <span class="user">vinijr</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
+                <div class="perfil-sugestao">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-UY5Vo9hk2V1V7ZG_4bnaw_mY1bV1YxuGA&s"
+                        alt="" class="perfil-sugestao-imagem">
+                    <div class="infos-perfil-sugestao">
+                        <span class="nome">Rodrygo Goes</span>
+                        <span class="user">rodrygogoes</span>
+                    </div>
+                    <a href="" class="btn-serAmigo">
+                        <span class="material-symbols-outlined">
+                            person_add
+                        </span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="{% static './src/js/postar.js' %}"></script>
+</body>
+</html>
