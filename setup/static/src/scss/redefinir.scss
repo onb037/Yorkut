@@ -1,0 +1,222 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  height: 100vh;
+  width: 100%;
+
+  background: linear-gradient(45deg, #2e2e2e, #181818);
+  background-size: 200%;
+  animation: colors 20s ease infinite;
+  transition: all 0.5s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container-redefinir {
+  width: 500px;
+  min-height: 75vh;
+  max-width: 85vw;
+  background: linear-gradient(#181818, #181818) padding-box,
+    linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+  position: relative;
+  box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.3);
+
+  .imagem-redefinir {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+    filter: drop-shadow(5px 5px 10px #000000);
+  }
+
+  .text-redefinir {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .form-redefinir {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    width: 100%;
+    padding: 0px 20px;
+    margin-bottom: 20px;
+
+    label {
+        margin-left: 10px;
+        font-size: 16px;
+    }
+
+    input {
+      background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
+        linear-gradient(90deg, #004aad, #40c9ff) border-box;
+      border: 2px solid transparent;
+      padding: 10px 10px;
+      width: 100%;
+      border-radius: 10px;
+      font-size: 14px;
+      background-color: transparent;
+      color: #fff;
+      margin-bottom: 20px;
+
+      @media screen and (max-width: 375px) {
+        font-size: 10;
+      }
+
+      &:focus {
+        outline: 1px solid #5de;
+      }
+    }
+
+    button {
+        margin: 0 auto;
+        padding: 10px 20px;
+        font-size: 16px;
+        color: #fff;
+        background-color: #004aad;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all ease 0.5s;
+
+        &:hover {
+            color: #004aad;
+            background-color: #fff;
+        }
+        
+      }
+  }
+
+  .voltar-inicio {
+    position: absolute;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    bottom: 0;
+    padding: 10px;
+
+    #btn-voltar-inicio {
+        width: 40px;
+        height: 40px;
+        background-color: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-decoration: none;
+        color: #004aad;
+        transition: all ease 0.5s;
+
+        &:hover {
+            color: #fff;
+            background-color: #004aad;
+        }
+    }
+
+    .label {
+        text-decoration: none;
+        color: #fff;
+    }
+  }
+
+
+
+
+}
+
+@keyframes colors {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+// Modo Noturno
+
+.botao-noturno {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 10px;
+    background: transparent;
+    border-radius: 50%;
+    cursor: pointer;
+  
+    span {
+      padding: 5px;
+      font-size: 24px;
+      color: #ffbb00;
+      text-align: center;
+      font-weight: bold;
+    }
+  }
+  
+  body.light {
+    background: linear-gradient(45deg,#d6d6d6,#a5a5a5);
+    color: #000;
+  
+
+  
+    .container-redefinir {
+      background-color: rgba(46, 46, 46, 0.7176470588);
+      background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+      border: 2px solid transparent;
+      color: #000;
+  
+    input {
+          background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+          border: 2px solid transparent;
+          color: #000;
+      }
+  
+
+    }
+
+    .voltar-inicio .label {
+        color: #000;
+    }
+  
+    footer  {
+      color: #000;
+    }
+  }
