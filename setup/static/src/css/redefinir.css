@@ -60,11 +60,20 @@ body {
   padding: 0px 20px;
   margin-bottom: 20px;
 }
-.container-redefinir .form-redefinir label {
+.container-redefinir .form-redefinir .errorlist {
+  list-style-type: none;
+  color: rgb(255, 73, 73);
+  font-size: 14px;
+  margin: 0 auto;
+}
+.container-redefinir .form-redefinir p {
+  width: 100%;
+}
+.container-redefinir .form-redefinir p label {
   margin-left: 10px;
   font-size: 16px;
 }
-.container-redefinir .form-redefinir input {
+.container-redefinir .form-redefinir p input {
   background: linear-gradient(#2e2e2e, #2e2e2e) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
   padding: 10px 10px;
@@ -76,11 +85,11 @@ body {
   margin-bottom: 20px;
 }
 @media screen and (max-width: 375px) {
-  .container-redefinir .form-redefinir input {
+  .container-redefinir .form-redefinir p input {
     font-size: 10;
   }
 }
-.container-redefinir .form-redefinir input:focus {
+.container-redefinir .form-redefinir p input:focus {
   outline: 1px solid #5de;
 }
 .container-redefinir .form-redefinir button {

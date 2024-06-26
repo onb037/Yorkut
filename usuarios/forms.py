@@ -10,7 +10,7 @@ class LoginForms(forms.Form):
             widget=forms.TextInput( 
                      attrs={
                         "class": "input-normal",
-                        "placeholder": "seuemail@email.com"
+                        "placeholder": "seuuser"
 
                     }
              )
