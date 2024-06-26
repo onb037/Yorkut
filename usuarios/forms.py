@@ -1,8 +1,10 @@
 from django import forms
 
+from django.contrib.auth.models import User
+
 class LoginForms(forms.Form):
     nome_login=forms.CharField(
-            label='Email', 
+            label='Usuário', 
             required=True, 
             max_length=100,
             widget=forms.TextInput( 
@@ -77,3 +79,12 @@ class CadastroForms(forms.Form):
         
                 
             
+      
+class PasswordResetForm(forms.Form):
+    email = forms.EmailField(label="Email", max_length=254)
+
+    def clean_email(self):
+        email = self.cleaned_data.get('email')
+        if not User.objects.filter(email=email).exists():
+            raise forms.ValidationError('Nenhum usuário encontrado com este e-mail.')
+        return email
