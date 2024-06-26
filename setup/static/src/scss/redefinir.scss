@@ -65,31 +65,43 @@ body {
     padding: 0px 20px;
     margin-bottom: 20px;
 
-    label {
+    .errorlist {
+      list-style-type: none;
+      color: rgb(255, 73, 73);
+      font-size: 14px;
+      margin: 0 auto;
+    }
+
+    p {
+      width: 100%;
+
+      label {
         margin-left: 10px;
         font-size: 16px;
     }
 
-    input {
-      background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
-        linear-gradient(90deg, #004aad, #40c9ff) border-box;
-      border: 2px solid transparent;
-      padding: 10px 10px;
-      width: 100%;
-      border-radius: 10px;
-      font-size: 14px;
-      background-color: transparent;
-      color: #fff;
-      margin-bottom: 20px;
+      input {
+        background: linear-gradient(#2e2e2e, #2e2e2e) padding-box,
+          linear-gradient(90deg, #004aad, #40c9ff) border-box;
+        border: 2px solid transparent;
+        padding: 10px 10px;
+        width: 100%;
+        border-radius: 10px;
+        font-size: 14px;
+        background-color: transparent;
+        color: #fff;
+        margin-bottom: 20px;
 
-      @media screen and (max-width: 375px) {
-        font-size: 10;
-      }
+        @media screen and (max-width: 375px) {
+          font-size: 10;
+        }
 
-      &:focus {
-        outline: 1px solid #5de;
+        &:focus {
+          outline: 1px solid #5de;
+        }
       }
     }
+
 
     button {
         margin: 0 auto;
