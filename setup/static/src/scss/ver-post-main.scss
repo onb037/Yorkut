@@ -66,6 +66,8 @@
                     background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
                     border: 2px solid transparent;
                     cursor: pointer;
+                    object-fit: cover;
+                    object-position: center;
                 }
     
                 .user-info-post {
@@ -91,6 +93,7 @@
                 max-width: 100%;
                 height: auto;
                 border-radius: 4px;
+                
             }
     
             .text-post {
@@ -176,6 +179,8 @@
                         border-radius: 50%;
                         background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
                         border: 2px solid transparent;
+                        object-fit: cover;
+                        object-position: center;
                     }
 
                     .seu-user {
@@ -251,6 +256,8 @@
                             border-radius: 50%;
                             background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
                             border: 2px solid transparent;
+                            object-fit: cover;
+                             object-position: center;
                         }
 
                         .user {

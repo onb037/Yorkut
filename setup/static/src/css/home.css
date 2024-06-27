@@ -173,6 +173,8 @@ main .container-amigos .amigo-info .amigo-imagem {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
 }
 main .container-amigos .amigo-info .amigo-user {
   text-transform: lowercase;
@@ -206,6 +208,8 @@ main .container-postagens .postagem .cabecalho-post .user-imagem {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
   cursor: pointer;
+  object-fit: cover;
+  object-position: center;
 }
 main .container-postagens .postagem .cabecalho-post .user-info-post {
   display: flex;
@@ -309,6 +313,8 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
   margin-right: 10px;
+  object-fit: cover;
+  object-position: center;
 }
 .container-lateral .seu-perfil .seus-info-perfil {
   display: flex;
@@ -358,6 +364,8 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao {
   display: flex;
