@@ -172,6 +172,8 @@ body {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
   margin-right: 10px;
+  object-fit: cover;
+  object-position: center;
 }
 .container-lateral .seu-perfil .seus-info-perfil {
   display: flex;
@@ -221,6 +223,8 @@ body {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao {
   display: flex;
@@ -311,6 +315,8 @@ body {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
   cursor: pointer;
+  object-fit: cover;
+  object-position: center;
 }
 #main .container-postagens .postagem .cabecalho-post .user-info-post {
   display: flex;
@@ -400,6 +406,8 @@ body {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
 }
 #main .container-postagens .ver-comentario .fazer-comentario .suas-info .seu-user {
   font-size: 12px;
@@ -466,6 +474,8 @@ body {
   border-radius: 50%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
   border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
 }
 #main .container-postagens .ver-comentario .outros-comentario .comentario .info-usuario .user {
   text-transform: lowercase;

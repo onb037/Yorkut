@@ -47,3 +47,6 @@ def apagar_post(request):
 
 def verpost(request):
     return render(request, 'galeria/pages/ver-post.html')
+
+def perfil(request):
+    return render(request, 'galeria/pages/perfil.html')

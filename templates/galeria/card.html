@@ -16,42 +16,42 @@
     </div>
 
     <ul class="side-items">
-        <li class="side-item ativo">
+        <a href="{% url 'card' %}" class="side-item ativo">
             <span class="material-symbols-outlined side-icon">
                 home
             </span>
             <a href="" class="side-text">Inicio</a>
-        </li>
-        <li class="side-item">
+        </a>
+        <a href="" class="side-item">
             <span class="material-symbols-outlined side-icon">
                 search
             </span>
             <a href="" class="side-text">Pesquisa</a>
-        </li>
-        <li class="side-item">
+        </a>
+        <a href="" class="side-item">
             <span class="material-symbols-outlined side-icon">
                 notifications
             </span>
             <a href="" class="side-text">Notificações</a>
-        </li>
-        <li class="side-item">
+        </a>
+        <a href="" class="side-item">
             <span class="material-symbols-outlined side-icon">
                 group_add
             </span>
             <a href="" class="side-text">Amigos</a>
-        </li>
-        <li class="side-item">
+        </a>
+        <a href="" class="side-item">
             <span class="material-symbols-outlined side-icon">
                 post_add
             </span>
             <a href="{% url 'postar' %}" class="side-text">Postar</a>
-        </li>
-        <li class="side-item">
+        </a>
+        <a href="{% url 'perfil' %}" class="side-item">
             <span class="material-symbols-outlined side-icon">
                 person
             </span>
             <a href="" class="side-text">Perfil</a>
-        </li>
+        </a>
     </ul>
 
     <button class="sair" id="sair"><span href="{% url 'logout' %}" class="material-symbols-outlined">

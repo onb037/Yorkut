@@ -20,52 +20,54 @@
     <div class="sidebar">
         <div class="logo">
             <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
-            <span>Yourkut</span>
+            <span>Yorkut</span>
         </div>
     
         <ul class="side-items">
-            <li class="side-item">
+            <a href="{% url 'card' %}" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     home
                 </span>
-                <a href="{% url 'card' %}" class="side-text">Inicio</a>
-            </li>
-            <li class="side-item">
+                <a href="" class="side-text">Inicio</a>
+            </a>
+            <a href="" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     search
                 </span>
                 <a href="" class="side-text">Pesquisa</a>
-            </li>
-            <li class="side-item">
+            </a>
+            <a href="" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     notifications
                 </span>
                 <a href="" class="side-text">Notificações</a>
-            </li>
-            <li class="side-item">
+            </a>
+            <a href="" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     group_add
                 </span>
                 <a href="" class="side-text">Amigos</a>
-            </li>
-            <li class="side-item ativo">
+            </a>
+            <a href="{% url 'postar' %}" class="side-item ativo">
                 <span class="material-symbols-outlined side-icon">
                     post_add
                 </span>
                 <a href="{% url 'postar' %}" class="side-text">Postar</a>
-            </li>
-            <li class="side-item">
+            </a>
+            <a href="{% url 'perfil' %}" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     person
                 </span>
                 <a href="" class="side-text">Perfil</a>
-            </li>
+            </a>
         </ul>
     
-        <button class="sair" id="sair"><span class="material-symbols-outlined">
+        <button class="sair" id="sair"><span href="{% url 'logout' %}" class="material-symbols-outlined">
                 logout
             </span>Sair</button>
     </div>
+
+
     <main class="main" id="main">
         <h1>Criar nova publicação!</h1>
         <div class="criar-postagem" id="criar-postagem">

@@ -1,0 +1,121 @@
+main {
+    width: calc(75% - 200px);
+    height: auto;
+    padding: 25px;
+    margin: 0 0 0 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 40px;
+
+    @media screen and (max-width: 920px) {
+        min-width: 70vw;
+    }
+
+    .container-cabecalho {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: flex;
+        align-items: center;
+        padding: 20px;
+        gap: 30px;
+
+        .imagem-perfil {
+            background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+            border: 2px solid transparent;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center;
+        }
+
+        .infos-perfil {
+            display: flex;
+            flex-direction: column;
+            padding: 10px;
+
+            .nome-perfil {
+                font-size: xx-large;
+                color: #fff;
+                font-weight: 600;
+                text-transform: capitalize;
+            }
+
+            .user-perfil {
+                font-size: small;
+                color: #ccc;
+                text-transform: lowercase;
+            }
+
+            .amigos-number {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: #fff;
+                margin-top: 10px;
+
+                .number {
+                    font-weight: bold;
+                }
+            }
+        }
+
+        .btn-config {
+            position: absolute;
+            margin: 30px;
+            right: 0;
+            top: 0;
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            background-color: #fff;
+            color: #004aad;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all ease 0.5s;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+    }
+
+    .container-postagens{
+        width: 100%;
+        height: auto;
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: start;
+        justify-content: space-between;
+        gap: 20px;
+
+        .post {
+            width: 220px;
+            height: 220px;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            text-decoration: none;
+            transition: all ease 0.5s;
+
+            &:hover {
+                opacity: 0.7;
+                scale: 1.05;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: center;
+            }
+        }
+    }
+}
