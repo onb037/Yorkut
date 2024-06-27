@@ -90,11 +90,13 @@ body {
   padding: 15px 10px;
   display: flex;
   align-items: center;
-  justify-content: start;
   gap: 5px;
   cursor: pointer;
   transition: all ease 0.5s;
   border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
 }
 .sidebar .side-items .side-item:hover {
   background-color: rgba(2, 84, 190, 0.4235294118);
