@@ -9,25 +9,20 @@
 }
 
 body {
-
-    width: 100%;
     min-height: 100vh;
+    height: 100vh;
+    width: 100%;
 
     background: #181818;
     display: flex;
     flex-direction: row;
-    color: #fff;
 }
 
-
 // Sidebar
-@import './sidebar.scss';
+@import '../components/sidebar';
 
-// Main (Bloco onde vai ter tudo menos a Sidebar)
-@import './perfil-main.scss';
+// Container Principal
+@import './_postar-main.scss';
 
-@import './container-lateral.scss';
-
-@import './loading-tela.scss';
-
-
+// Carregar Tela
+@import '../components/loading-tela';

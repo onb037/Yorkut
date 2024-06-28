@@ -1,0 +1,11 @@
+// src/scss/main.scss
+
+@import 'components/sidebar';
+@import 'components/container-lateral';
+@import 'components/loading-tela';
+
+// Import pages
+@import 'pages/home';
+@import 'pages/perfil';
+@import 'pages/postar.scss';
+@import 'pages/ver-post.scss';

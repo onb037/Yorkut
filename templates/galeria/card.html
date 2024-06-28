@@ -55,9 +55,9 @@
         </a>
     </ul>
 
-    <button class="sair" id="sair"><span href="{% url 'logout' %}" class="material-symbols-outlined">
+    <a href="{% url 'logout' %}" class="sair" id="sair"><span  class="material-symbols-outlined">
             logout
-        </span>Sair</button>
+        </span>Sair</a>
 </div>
 
 {% for message in messages %}
