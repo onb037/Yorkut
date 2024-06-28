@@ -16,6 +16,10 @@
 
     color: #fff;
 
+    @media screen and (max-width: 425px) {
+        max-width: 20vw;
+    }
+
     .logo {
         width: 100%;
 
@@ -27,14 +31,23 @@
         img {
             width: 30%;
             height: auto;
+
+            @media screen and (max-width: 425px) {
+                width: 90%;
+            }
         }
 
         span {
+            display: block;
             font-size: 20px;
             font-weight: bold;
             font-family: 'Montserrat',sans-serif;
             color: #004aad;
             margin-bottom: 5px;
+
+            @media screen and (max-width: 425px) {
+                display: none;
+            }
         }
     }
 
@@ -70,6 +83,11 @@
             .side-text {
                 text-decoration: none;
                 color: #fff;
+                display: block;
+
+                @media screen and (max-width: 425px) {
+                    display: none;
+                }
             }
 
 
@@ -97,6 +115,10 @@
         transition: all ease 0.5s;
         border-radius: 5px;
         cursor: pointer;
+
+        @media screen and (max-width: 425px) {
+            font-size: x-small;
+        }
 
         &:hover {
             background-color: rgba(253, 69, 69, 0.192);
