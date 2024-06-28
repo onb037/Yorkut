@@ -31,6 +31,11 @@ body {
   justify-content: space-between;
   color: #fff;
 }
+@media screen and (max-width: 425px) {
+  .sidebar {
+    max-width: 20vw;
+  }
+}
 .sidebar .logo {
   width: 100%;
   display: flex;
@@ -42,12 +47,23 @@ body {
   width: 30%;
   height: auto;
 }
+@media screen and (max-width: 425px) {
+  .sidebar .logo img {
+    width: 90%;
+  }
+}
 .sidebar .logo span {
+  display: block;
   font-size: 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   color: #004aad;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 425px) {
+  .sidebar .logo span {
+    display: none;
+  }
 }
 .sidebar .side-items {
   display: flex;
@@ -78,6 +94,12 @@ body {
 .sidebar .side-items .side-item .side-text {
   text-decoration: none;
   color: #fff;
+  display: block;
+}
+@media screen and (max-width: 425px) {
+  .sidebar .side-items .side-item .side-text {
+    display: none;
+  }
 }
 .sidebar .side-items .side-item .side-icon {
   font-size: 28px;
@@ -100,6 +122,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+@media screen and (max-width: 425px) {
+  .sidebar .sair {
+    font-size: x-small;
+  }
+}
 .sidebar .sair:hover {
   background-color: rgba(253, 69, 69, 0.192);
 }
@@ -117,9 +144,15 @@ main {
   align-items: center;
   gap: 40px;
 }
-@media screen and (max-width: 920px) {
+@media screen and (max-width: 1024px) {
   main {
-    min-width: 70vw;
+    min-width: calc(100% - 200px);
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    width: 80%;
+    margin: 0 0 0 20vw;
   }
 }
 main .container-cabecalho {
@@ -333,6 +366,36 @@ main .container-postagens .post img {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
   transform: scale(1.1);
+}
+
+#loading-screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100vw;
+  height: 100vh;
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#loading-screen .spinner {
+  border: 16px solid #f3f3f3;
+  border-top: 16px solid #3498db;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*# sourceMappingURL=perfil.css.map */

@@ -31,6 +31,11 @@ body {
   justify-content: space-between;
   color: #fff;
 }
+@media screen and (max-width: 425px) {
+  .sidebar {
+    max-width: 20vw;
+  }
+}
 .sidebar .logo {
   width: 100%;
   display: flex;
@@ -42,12 +47,23 @@ body {
   width: 30%;
   height: auto;
 }
+@media screen and (max-width: 425px) {
+  .sidebar .logo img {
+    width: 90%;
+  }
+}
 .sidebar .logo span {
+  display: block;
   font-size: 20px;
   font-weight: bold;
   font-family: "Montserrat", sans-serif;
   color: #004aad;
   margin-bottom: 5px;
+}
+@media screen and (max-width: 425px) {
+  .sidebar .logo span {
+    display: none;
+  }
 }
 .sidebar .side-items {
   display: flex;
@@ -78,6 +94,12 @@ body {
 .sidebar .side-items .side-item .side-text {
   text-decoration: none;
   color: #fff;
+  display: block;
+}
+@media screen and (max-width: 425px) {
+  .sidebar .side-items .side-item .side-text {
+    display: none;
+  }
 }
 .sidebar .side-items .side-item .side-icon {
   font-size: 28px;
@@ -100,6 +122,11 @@ body {
   border-radius: 5px;
   cursor: pointer;
 }
+@media screen and (max-width: 425px) {
+  .sidebar .sair {
+    font-size: x-small;
+  }
+}
 .sidebar .sair:hover {
   background-color: rgba(253, 69, 69, 0.192);
 }
@@ -116,6 +143,17 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+@media screen and (max-width: 1024px) {
+  main {
+    width: calc(100% - 200px);
+  }
+}
+@media screen and (max-width: 425px) {
+  main {
+    width: 80%;
+    margin: 0 0 0 20vw;
+  }
 }
 main h1 {
   color: #fff;
@@ -223,12 +261,12 @@ main .criar-postagem .form-postagem button:hover {
 }
 
 #loading-screen {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: 9999;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background: #ccc;
   display: flex;
   align-items: center;
