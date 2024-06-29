@@ -99,7 +99,7 @@
                     align-items: center;
                     justify-content: center;
                     text-decoration: none;
-                    color: rgb(27, 126, 27);
+                    color: rgb(255, 59, 59);
                     font-weight: bold;
                     border-radius: 50%;
                     scale: 0.80;
@@ -112,6 +112,10 @@
                     &:hover {
                         scale: 1;
                     }
+                }
+
+                .btn-serAmigo.seguindo {
+                    color: rgb(27, 126, 27);
                 }
             }
         }
