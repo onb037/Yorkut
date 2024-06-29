@@ -43,7 +43,7 @@
                 </span>
                 <span href="" class="side-text">Notificações</span>
             </a>
-            <a href="" class="side-item">
+            <a href="{% url 'amigos' %}" class="side-item">
                 <span class="material-symbols-outlined side-icon">
                     group_add
                 </span>
@@ -63,9 +63,9 @@
             </a>
         </ul>
     
-        <button class="sair" id="sair"><span href="{% url 'logout' %}" class="material-symbols-outlined">
-                logout
-            </span>Sair</button>
+        <a href="{% url 'logout' %}" class="sair" id="sair"><span  class="material-symbols-outlined">
+            logout
+        </span>Sair</a>
     </div>
 
 

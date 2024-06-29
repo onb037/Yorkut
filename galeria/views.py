@@ -50,3 +50,6 @@ def verpost(request):
 
 def perfil(request):
     return render(request, 'galeria/pages/perfil.html')
+
+def amigos(request):
+    return render(request, 'galeria/pages/amigos.html')
