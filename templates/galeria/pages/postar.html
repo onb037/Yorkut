@@ -10,16 +10,9 @@
     <title>Bem-Vindo ao Yorkut</title>
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="spinner"></div>
-        <p>Carregando...</p>
-    </div>
-    <script src="{% static './src/js/loading-screen.js'%}"></script>
 
-    
-<!-- templates/alguma_pagina.html -->
+    {% include '../components/loading-screen.html'%}
     {% include '../components/sidebar.html' with current_page='postar' %}
-
 
 
     <main class="main" id="main">
