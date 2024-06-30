@@ -19,18 +19,3 @@ botoesLike.forEach(botao => {
 });
 
 
-const modal = document.getElementById('modal-comentarios');
-const btnsComentario = document.querySelectorAll('.btn-coment');
-
-btnsComentario.forEach(botaob =>{
-    botaob.addEventListener('click', function(e){
-        let botaoClicado = e.target;
-        modal.classList.toggle('ativo');
-
-        const fecharBtn = document.querySelector('.fechar-modal-comentario');
-
-        fecharBtn.addEventListener('click', ()=>{
-            modal.classList.remove('ativo');
-        })
-    })
-})

@@ -47,7 +47,7 @@ main {
             display: flex;
             flex-direction: column;
             width: 40%;
-            gap: 5px;
+            gap: 10px;
             color: #000;
             background: #cccccc9a;
             padding: 15px;
@@ -134,7 +134,7 @@ main {
                 transition: background ease .5s;
 
                 &:hover {
-                    background: linear-gradient(90deg, #004aad, #40c9ff);
+                    background:#004aad;
                 }
             }
         }

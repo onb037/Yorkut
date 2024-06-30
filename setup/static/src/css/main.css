@@ -239,10 +239,14 @@
   position: absolute;
   right: 0;
   top: 50;
+  scale: 0.8;
   transition: all ease 0.3s;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
-  transform: scale(1.1);
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 #loading-screen {
@@ -478,7 +482,7 @@ main .container-amigos .amigo-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   min-width: 100px;
   cursor: pointer;
@@ -775,10 +779,14 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   position: absolute;
   right: 0;
   top: 50;
+  scale: 0.8;
   transition: all ease 0.3s;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
-  transform: scale(1.1);
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 * {
@@ -1144,10 +1152,14 @@ main .container-postagens .post img {
   position: absolute;
   right: 0;
   top: 50;
+  scale: 0.8;
   transition: all ease 0.3s;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
-  transform: scale(1.1);
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 #loading-screen {
@@ -1362,7 +1374,7 @@ main .criar-postagem .form-postagem {
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 5px;
+  gap: 10px;
   color: #000;
   background: rgba(204, 204, 204, 0.6039215686);
   padding: 15px;
@@ -1438,7 +1450,7 @@ main .criar-postagem .form-postagem button {
   transition: background ease 0.5s;
 }
 main .criar-postagem .form-postagem button:hover {
-  background: linear-gradient(90deg, #004aad, #40c9ff);
+  background: #004aad;
 }
 
 #loading-screen {
@@ -1748,10 +1760,14 @@ body {
   position: absolute;
   right: 0;
   top: 50;
+  scale: 0.8;
   transition: all ease 0.3s;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
-  transform: scale(1.1);
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 #main {

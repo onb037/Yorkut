@@ -17,56 +17,7 @@
     <script src="{% static './src/js/loading-screen.js'%}"></script>
 
     
-    <div class="sidebar">
-        <div class="logo">
-            <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
-            <span>Yorkut</span>
-        </div>
-    
-        <ul class="side-items">
-            <a href="{% url 'card' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    home
-                </span>
-                
-                <span href="" class="side-text">Inicio</span>
-            </a>
-            <a href="" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    search
-                </span>
-                <span href="" class="side-text">Pesquisa</span>
-            </a>
-            <a href="" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    notifications
-                </span>
-                <span href="" class="side-text">Notificações</span>
-            </a>
-            <a href="{% url 'amigos' %}" class="side-item ativo">
-                <span class="material-symbols-outlined side-icon">
-                    group_add
-                </span>
-                <span href="" class="side-text">Amigos</span>
-            </a>
-            <a href="{% url 'postar' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    post_add
-                </span>
-                <span href="" class="side-text">Postar</span>
-            </a>
-            <a href="{% url 'perfil' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    person
-                </span>
-                <span href="" class="side-text">Perfil</span>
-            </a>
-        </ul>
-    
-        <a href="{% url 'logout' %}" class="sair" id="sair"><span  class="material-symbols-outlined">
-            logout
-        </span>Sair</a>
-    </div>
+    {% include '../components/sidebar.html' with current_page='amigos' %}
 
 
     <main class="main" id="main">
@@ -80,7 +31,7 @@
         </div>
 
         <div class="container-amigos">
-            <h2 class="titulo-amigos">Veja seus amigos do <b>Yorkut!</b></h2>
+            <h2 class="titulo-amigos">Veja quem você esta seguindo no <b>Yorkut!</b></h2>
             <div class="box-amigos">
                 <div class="amigo">
                     <img src="https://www.cnnbrasil.com.br/wp-content/uploads/sites/12/2024/06/messi-argentina-guatemala-e1718811255101.jpg?w=1220&h=674&crop=1"
@@ -89,7 +40,7 @@
                         <span class="nome-amigo">Lionel Messi</span>
                         <span class="user-amigo">lionelmessi</span>
                     </div>
-                    <a href="" class="btn-serAmigo">
+                    <a href="" class="btn-serAmigo seguindo">
                         <span class="material-symbols-outlined">
                             person_check
                         </span>
@@ -102,7 +53,7 @@
                         <span class="nome-amigo">Luis Suárez</span>
                         <span class="user-amigo">luisuarez</span>
                     </div>
-                    <a href="" class="btn-serAmigo">
+                    <a href="" class="btn-serAmigo seguindo">
                         <span class="material-symbols-outlined">
                             person_check
                         </span>
@@ -129,7 +80,7 @@
         </div>
 
         <div class="container-sugestao box">
-            <h3>Seja amigos deles também!</h3>
+            <h3>Sigua eles também!</h3>
             <div class="perfis-sugestao">
                 <!-- Cada perfil-sugestao é um perfil -->
                 <div class="perfil-sugestao">
@@ -175,6 +126,6 @@
         </div>
     </section>
 
-    <script src="{% static './src/js/home.js' %}"></script>
+    <script src="{% static './src/js/amigo.js' %}"></script>
 </body>
 </html>

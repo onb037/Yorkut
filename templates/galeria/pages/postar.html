@@ -17,56 +17,9 @@
     <script src="{% static './src/js/loading-screen.js'%}"></script>
 
     
-    <div class="sidebar">
-        <div class="logo">
-            <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
-            <span>Yorkut</span>
-        </div>
-    
-        <ul class="side-items">
-            <a href="{% url 'card' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    home
-                </span>
-                
-                <span href="" class="side-text">Inicio</span>
-            </a>
-            <a href="" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    search
-                </span>
-                <span href="" class="side-text">Pesquisa</span>
-            </a>
-            <a href="" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    notifications
-                </span>
-                <span href="" class="side-text">Notificações</span>
-            </a>
-            <a href="{% url 'amigos' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    group_add
-                </span>
-                <span href="" class="side-text">Amigos</span>
-            </a>
-            <a href="{% url 'postar' %}" class="side-item ativo">
-                <span class="material-symbols-outlined side-icon">
-                    post_add
-                </span>
-                <span href="" class="side-text">Postar</span>
-            </a>
-            <a href="{% url 'perfil' %}" class="side-item">
-                <span class="material-symbols-outlined side-icon">
-                    person
-                </span>
-                <span href="" class="side-text">Perfil</span>
-            </a>
-        </ul>
-    
-        <a href="{% url 'logout' %}" class="sair" id="sair"><span  class="material-symbols-outlined">
-            logout
-        </span>Sair</a>
-    </div>
+<!-- templates/alguma_pagina.html -->
+    {% include '../components/sidebar.html' with current_page='postar' %}
+
 
 
     <main class="main" id="main">
@@ -75,15 +28,20 @@
             <img class="imagem-preview" id="imagem-preview" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="Preview da Imagem" >
             <form action="{% url 'postar' %}" class="form-postagem" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-
+            
                 {% for field in form.visible_fields %}
                 <div class="input-box">
-                    <label for="{{ field.id_for_label }}" class="">{{ field.label }}</label>
+                    {% if field.name == 'imagem' %}
+                        <label for="{{ field.id_for_label }}" class="label-enviar-imagem">{{ field.label }}</label>
+                    {% else %}
+                        <label for="{{ field.id_for_label }}">{{ field.label }}</label>
+                    {% endif %}
                     {{ field }}
                 </div>
                 {% endfor %}
                 <button type="submit">Postar</button>
             </form>
+            
         </div>
     </main>
 

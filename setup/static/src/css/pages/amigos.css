@@ -277,10 +277,14 @@ body {
   position: absolute;
   right: 0;
   top: 50;
+  scale: 0.8;
   transition: all ease 0.3s;
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
-  transform: scale(1.1);
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 #main {
@@ -373,7 +377,7 @@ body {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  color: rgb(27, 126, 27);
+  color: rgb(255, 59, 59);
   font-weight: bold;
   border-radius: 50%;
   scale: 0.8;
@@ -385,6 +389,9 @@ body {
 }
 #main .container-amigos .box-amigos .amigo .btn-serAmigo:hover {
   scale: 1;
+}
+#main .container-amigos .box-amigos .amigo .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
 }
 
 /*# sourceMappingURL=amigos.css.map */

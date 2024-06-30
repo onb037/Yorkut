@@ -9,56 +9,7 @@
 <script src="{% static './src/js/loading-screen.js'%}"></script>
 
 
-<div class="sidebar">
-    <div class="logo">
-        <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
-        <span>Yorkut</span>
-    </div>
-
-    <ul class="side-items">
-        <a href="{% url 'card' %}" class="side-item ativo">
-            <span class="material-symbols-outlined side-icon">
-                home
-            </span>
-            
-            <span href="" class="side-text">Inicio</span>
-        </a>
-        <a href="" class="side-item">
-            <span class="material-symbols-outlined side-icon">
-                search
-            </span>
-            <span href="" class="side-text">Pesquisa</span>
-        </a>
-        <a href="" class="side-item">
-            <span class="material-symbols-outlined side-icon">
-                notifications
-            </span>
-            <span href="" class="side-text">Notificações</span>
-        </a>
-        <a href="{% url 'amigos' %}" class="side-item">
-            <span class="material-symbols-outlined side-icon">
-                group_add
-            </span>
-            <span href="" class="side-text">Amigos</span>
-        </a>
-        <a href="{% url 'postar' %}" class="side-item">
-            <span class="material-symbols-outlined side-icon">
-                post_add
-            </span>
-            <span href="" class="side-text">Postar</span>
-        </a>
-        <a href="{% url 'perfil' %}" class="side-item">
-            <span class="material-symbols-outlined side-icon">
-                person
-            </span>
-            <span href="" class="side-text">Perfil</span>
-        </a>
-    </ul>
-
-    <a href="{% url 'logout' %}" class="sair" id="sair"><span  class="material-symbols-outlined">
-            logout
-        </span>Sair</a>
-</div>
+    {% include './components/sidebar.html' with current_page='home' %}
 
 {% for message in messages %}
 <div style="display: none;">
@@ -135,7 +86,7 @@
         </div>
 
         <div class="container-sugestao box">
-            <h3>Seja amigos deles também!</h3>
+            <h3>Sigua eles também!</h3>
             <div class="perfis-sugestao">
                 <!-- Cada perfil-sugestao é um perfil -->
                 <div class="perfil-sugestao">
