@@ -482,7 +482,7 @@ main .container-amigos .amigo-info {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   height: 100%;
   min-width: 100px;
   cursor: pointer;
@@ -1374,7 +1374,7 @@ main .criar-postagem .form-postagem {
   display: flex;
   flex-direction: column;
   width: 40%;
-  gap: 5px;
+  gap: 10px;
   color: #000;
   background: rgba(204, 204, 204, 0.6039215686);
   padding: 15px;
@@ -1450,7 +1450,7 @@ main .criar-postagem .form-postagem button {
   transition: background ease 0.5s;
 }
 main .criar-postagem .form-postagem button:hover {
-  background: linear-gradient(90deg, #004aad, #40c9ff);
+  background: #004aad;
 }
 
 #loading-screen {

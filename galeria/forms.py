@@ -10,7 +10,7 @@ class PostForms(forms.ModelForm):
         fields = [ 'nome_usuario', 'imagem', 'legenda']  
         widgets = {
             'legenda': forms.Textarea(attrs={'rows': 5, 'class': 'form-control'}),  
-            'imagem': forms.FileInput(attrs={'class': 'form-control'}), 
+            'imagem': forms.FileInput(attrs={'class': 'input-imagem'}), 
             'nome_usuario': forms.TextInput(attrs={'class': 'form-control'}),  
         }
 

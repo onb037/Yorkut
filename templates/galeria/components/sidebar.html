@@ -1,0 +1,39 @@
+{% load static %}
+<div class="sidebar">
+    <div class="logo">
+        <img src="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" alt="">
+        <span>Yorkut</span>
+    </div>
+
+    <ul class="side-items">
+        <a href="{% url 'card' %}" class="side-item {% if current_page == 'home' %}ativo{% endif %}">
+            <span class="material-symbols-outlined side-icon">home</span>
+            <span class="side-text">Inicio</span>
+        </a>
+        <a href="" class="side-item ">
+            <span class="material-symbols-outlined side-icon">search</span>
+            <span class="side-text">Pesquisa</span>
+        </a>
+        <a href="" class="side-item ">
+            <span class="material-symbols-outlined side-icon">notifications</span>
+            <span class="side-text">Notificações</span>
+        </a>
+        <a href="{% url 'amigos' %}" class="side-item {% if current_page == 'amigos' %}ativo{% endif %}">
+            <span class="material-symbols-outlined side-icon">group_add</span>
+            <span class="side-text">Seguindo</span>
+        </a>
+        <a href="{% url 'postar' %}" class="side-item {% if current_page == 'postar' %}ativo{% endif %}">
+            <span class="material-symbols-outlined side-icon">post_add</span>
+            <span class="side-text">Postar</span>
+        </a>
+        <a href="{% url 'perfil' %}" class="side-item {% if current_page == 'perfil' %}ativo{% endif %}">
+            <span class="material-symbols-outlined side-icon">person</span>
+            <span class="side-text">Perfil</span>
+        </a>
+    </ul>
+
+    <a href="{% url 'logout' %}" class="sair" id="sair">
+        <span class="material-symbols-outlined">logout</span>
+        Sair
+    </a>
+</div>
