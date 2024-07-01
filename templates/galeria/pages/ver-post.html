@@ -1,7 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -11,9 +10,7 @@
     <link rel="icon" href="{% static './src/logo/Y-corrigida-removebg-preview.png' %}" type="image/x-icon">
     <title>Bem-Vindo ao Yorkut</title>
 </head>
-
 <body>
-
     {% include '../components/loading-screen.html'%}
     {% include '../components/sidebar.html'%}
 
@@ -31,19 +28,18 @@
             <!-- auto explicativo as classe ne :) -->
             <div class="postagem" id="postagem">
                 <div class="cabecalho-post">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvvTNp33bnN4rL1z48GRpWNgAL22_6VY2Iqw&s"
-                        alt="" class="user-imagem amigo-imagem">
+                    <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
                     <div class="user-info-post amigo-info">
-                        <span class="nome-post">Neymar Jr.</span>
-                        <span class="user-post amigo-user">neymarjr</span>
+                        <span class="nome-post">{{ post.autor.username }}</span>
+                        <span class="user-post amigo-user">{{ post.autor.username }}</span>
                     </div>
                 </div>
                 <img class="imagem-post" id="imagem-post"
-                    src="https://veja.abril.com.br/wp-content/uploads/2023/08/NEYMAR-04_1.jpg.jpg?quality=90&strip=info&w=720&h=440&crop=1"
-                    alt="">
+                src="{% if post.imagem %}{{ post.imagem.url }}{% else %}{% static 'default_image.jpg' %}{% endif %}"
+                alt="">
                 <div class="text-post">
-                    <span class="user-post">neymarjr</span>
-                    <span class="legenda-post">Silêncio Haters😛😜🤫</span>
+                    <span class="user-post">{{ post.autor.username }}</span>
+                    <span class="legenda-post">{{ post.legenda }}</span>
                 </div>
                 <div class="acao-post">
                     <button class="acao-btn btn-like" title="Curtir">
@@ -59,27 +55,32 @@
                 </div>
             </div>
             <div class="ver-comentario">
-                <form class="fazer-comentario">
+                <!-- Formulário para fazer um novo comentário -->
+                <form class="fazer-comentario" action="{% url 'verpost' post.id %}" method="post">
+                    {% csrf_token %}
                     <div class="suas-info">
-                        <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp"
+                        <img src="{% if request.user.profile.foto_perfil %}{{ request.user.profile.foto_perfil.url }}{% else %}{% static 'default_profile.jpg' %}{% endif %}"
                             alt="" class="sua-imagem">
-                        <span class="seu-user">seusuer</span>
+                        <span class="seu-user">{{ request.user.username }}</span>
                     </div>
-
-                    <textarea name="" id="fazer-comentario" placeholder="Faça um comentario"></textarea>
-                    <button>Comentar</button>
+                
+                    <textarea name="texto" id="fazer-comentario" placeholder="Faça um comentário"></textarea>
+                    <button type="submit">Comentar</button>
                 </form>
-
+        
+                <!-- Listagem de comentários existentes -->
                 <div class="outros-comentario">
-                    <div class="comentario">
-                        <div class="info-usuario">
-                            <img src="https://media.gettyimages.com/id/1428217516/pt/foto/harrison-new-jersey-lionel-messi-of-argentina-celebrates-his-goal-in-the-second-half-against.jpg?s=594x594&w=gi&k=20&c=XlVFHsrAsceFqNBJAAv1zT1KRU8fVNkGct9D1lb8SJ8="
-                                alt="" class="imagem">
-                            <span class="user">messi</span>
+                    {% for comentario in post.comentarios.all %}
+                        <div class="comentario">
+                            <div class="info-usuario">
+                                <img src="{{ comentario.autor.profile.foto_perfil.url }}" alt="" class="imagem">
+                                <span class="user">{{ comentario.autor.username }}</span>
+                            </div>
+                            <p class="texto">{{ comentario.texto }}</p>
                         </div>
-                        <p class="texto">Te amo ney😍.</p>
-                    </div>
-
+                    {% empty %}
+                        <p>Sem comentários ainda.</p>
+                    {% endfor %}
                 </div>
             </div>
         </div>
@@ -91,5 +92,4 @@
     <script src="{% static './src/js/amigo.js' %}"></script>
     <script src="{% static './src/js/home.js' %}"></script>
 </body>
-
 </html>

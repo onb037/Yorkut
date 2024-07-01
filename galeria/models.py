@@ -1,5 +1,6 @@
 from django.db import models
 from django.contrib.auth import get_user_model
+from datetime import datetime
 
 class Post(models.Model):
     autor = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
@@ -10,6 +11,11 @@ class Post(models.Model):
     data_hora_criacao = models.DateTimeField(auto_now_add=True)
     curtidas = models.IntegerField(default=0)
     privacidade = models.BooleanField(default=True)
-    comentarios = models.TextField(blank=True)
     
+class Comentario(models.Model):
+    post = models.ForeignKey(Post, related_name='comentarios', on_delete=models.CASCADE)
+    autor = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
+    texto = models.TextField()
+    data_hora = models.DateTimeField(auto_now_add=True)
+
 
