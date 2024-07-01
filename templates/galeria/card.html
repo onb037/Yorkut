@@ -27,42 +27,44 @@
 
     <!-- container das postagens, cada "postagem" uma postagem -->
     <section class="container-postagens">
-        {% for post in posts %}
-          <div class="postagem" id="postagem">
-            <div class="cabecalho-post">
-              {% if post.autor.foto_perfil %}
-                <img src="{{ post.autor.foto_perfil }}" alt="" class="user-imagem amigo-imagem">
-              {% else %}
-                <img src="{{ post.autor.foto_perfil }}"
-                    alt="" class="user-imagem amigo-imagem">
-              {% endif %}
-              <div class="user-info-post amigo-info">
-                <span class="nome-post">{{ post.autor.username }}</span>
-                <span class="user-post amigo-user">{{ post.autor.username }}</span>
+      {% if posts %}
+          {% for post in posts %}
+              <div class="postagem" id="postagem">
+                  <div class="cabecalho-post">
+                      {% if post.autor.foto_perfil %}
+                          <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
+                      {% else %}
+                          <img src="{% static 'default_profile.jpg' %}" alt="" class="user-imagem amigo-imagem">
+                      {% endif %}
+                      <div class="user-info-post amigo-info">
+                          <span class="nome-post">{{ post.autor.username }}</span>
+                          <span class="user-post amigo-user">{{ post.autor.username }}</span>
+                      </div>
+                  </div>
+                  <img class="imagem-post" id="imagem-post"
+                  src="{% if post.imagem %}{{ post.imagem.url }}{% else %}{% static 'default_image.jpg' %}{% endif %}"
+                  alt="">
+                  <div class="text-post">
+                      <span class="user-post">{{ post.autor.username }}</span>
+                      <span class="legenda-post">{{ post.legenda }}</span>
+                  </div>
+                  <div class="acao-post">
+                      <button class="acao-btn btn-like" title="Curtir">
+                          <span class="material-symbols-outlined icon-like">
+                              sentiment_neutral
+                          </span>
+                      </button>
+                      <a href="{% url 'verpost' post.id %}" class="acao-btn btn-coment" title="Comentar">
+                          <span class="material-symbols-outlined icon-coment">
+                              chat
+                          </span>
+                      </a>
+                  </div>
               </div>
-            </div>
-            <img class="imagem-post" id="imagem-post"
-            src="{% if post.imagem %}{{ post.imagem.url }}{% else %}{% static 'default_image.jpg' %}{% endif %}"
-            alt="">
-            <div class="text-post">
-              <span class="user-post">{{ post.autor.username }}</span>
-              <span class="legenda-post">{{ post.legenda }}</span>
-            </div>
-            <div class="acao-post">
-              <button class="acao-btn btn-like" title="Curtir">
-                <span class="material-symbols-outlined icon-like">
-                  sentiment_neutral
-                </span>
-              </button>
-              <a href="{% url 'verpost' %}" class="acao-btn btn-coment" title="Comentar">
-                <span class="material-symbols-outlined icon-coment">
-                  chat
-                </span>
-              </a>
-            </div>
-          </div>
-        {% endfor %}
-      </section>
+          {% endfor %}
+      {% else %}
+          <p>Não há postagens disponíveis.</p>
+      {% endif %}
       
 </main>
 

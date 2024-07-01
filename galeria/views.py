@@ -1,10 +1,10 @@
 #views
 
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
-from galeria.models import Post
+from galeria.models import Post, Comentario
 
-from galeria.forms import PostForms
+from galeria.forms import PostForms, ComentarioForm
 
 from django.contrib import messages
 
@@ -18,7 +18,7 @@ def card(request):
         messages.error(request, 'Usuário não logado')
         return redirect('login')
     
-    posts = Post.objects.filter(privacidade=True)
+    posts = Post.objects.order_by('data_hora_criacao').filter(privacidade=True)
     context = {'posts': posts}
     return render(request, 'galeria/card.html', context)
 
@@ -45,8 +45,21 @@ def editar_post(request):
 def apagar_post(request):
     pass
 
-def verpost(request):
-    return render(request, 'galeria/pages/ver-post.html')
+#comentario
+def verpost(request, post_id):
+    post = get_object_or_404(Post, id=post_id)
+    if request.method == 'POST':
+        form = ComentarioForm(request.POST)
+        if form.is_valid():
+            novo_comentario = form.save(commit=False)
+            novo_comentario.autor = request.user
+            novo_comentario.post = post
+            novo_comentario.save()
+           
+            return redirect('verpost', post_id=post_id)
+    else:
+        form = ComentarioForm()
+    return render(request, 'galeria/pages/ver-post.html', {'post': post, 'form': form})
 
 def perfil(request):
     return render(request, 'galeria/pages/perfil.html')
