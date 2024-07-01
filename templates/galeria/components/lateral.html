@@ -3,7 +3,7 @@
 <section class="container-lateral" id="container-lateral">
     {% if current_page != 'perfil' %}
     <div class="seu-perfil box">
-        <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" alt="" class="sua-imagem-perfil">
+        <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="sua-imagem-perfil">
         <div class="seus-info-perfil">
             {% if user.is_authenticated %}
                 <span class="seu-nome-perfil">{{ user.get_username }}</span>

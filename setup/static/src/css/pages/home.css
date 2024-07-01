@@ -230,6 +230,9 @@ main .container-amigos .amigo-info .amigo-imagem {
     height: 40px;
   }
 }
+main .container-amigos .amigo-info .nome-post {
+  text-transform: capitalize;
+}
 main .container-amigos .amigo-info .amigo-user {
   text-transform: lowercase;
   color: #fff;
@@ -433,6 +436,9 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
 .container-lateral .seu-perfil .seus-info-perfil {
   display: flex;
   flex-direction: column;
+}
+.container-lateral .seu-perfil .seus-info-perfil .seu-nome-perfil {
+  text-transform: capitalize;
 }
 .container-lateral .seu-perfil .seus-info-perfil .seu-user-perfil {
   color: #ccc;

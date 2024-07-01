@@ -295,6 +295,9 @@ main .container-postagens .post img {
   display: flex;
   flex-direction: column;
 }
+.container-lateral .seu-perfil .seus-info-perfil .seu-nome-perfil {
+  text-transform: capitalize;
+}
 .container-lateral .seu-perfil .seus-info-perfil .seu-user-perfil {
   color: #ccc;
   font-size: 12px;

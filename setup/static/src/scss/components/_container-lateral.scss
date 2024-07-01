@@ -44,6 +44,10 @@
             display: flex;
             flex-direction: column;
 
+            .seu-nome-perfil {
+                text-transform: capitalize;
+            }
+
             .seu-user-perfil {
                 color: #ccc;
                 font-size: 12px;
