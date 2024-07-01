@@ -16,7 +16,14 @@
 
 
     <main class="main" id="main">
-        <h1>Criar nova publicação!</h1>
+        <div class="header" id="header">
+            <a href="{% url 'card' %}" class="btn-voltar">
+                <span class="material-symbols-outlined icon">
+                    arrow_back
+                </span>
+                <span>Voltar</span>
+            </a>
+        </div>
         <div class="criar-postagem" id="criar-postagem">
             <img class="imagem-preview" id="imagem-preview" src="https://www.cbvj.org.br/index/wp-content/uploads/2017/07/default.png" alt="Preview da Imagem" >
             <form action="{% url 'postar' %}" class="form-postagem" method="POST" enctype="multipart/form-data">
@@ -37,6 +44,8 @@
             
         </div>
     </main>
+
+     {% include "../components/lateral.html" %} 
 
     <script src="{% static './src/js/postar.js' %}"></script>
 </body>
