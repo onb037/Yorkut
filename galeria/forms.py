@@ -7,11 +7,10 @@ from django.contrib.auth.models import User
 class PostForms(forms.ModelForm):
     class Meta:
         model = Post
-        fields = [ 'nome_usuario', 'imagem', 'legenda']  
+        fields = ['imagem', 'legenda']  
         widgets = {
             'legenda': forms.Textarea(attrs={'rows': 5, 'class': 'form-control'}),  
-            'imagem': forms.FileInput(attrs={'class': 'input-imagem'}), 
-            'nome_usuario': forms.TextInput(attrs={'class': 'form-control'}),  
+            'imagem': forms.FileInput(attrs={'class': 'input-imagem'}),
         }
 
     def clean_imagem(self):

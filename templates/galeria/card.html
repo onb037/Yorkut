@@ -8,7 +8,7 @@
     {% include './components/sidebar.html' with current_page='home' %}
 
     {% for message in messages %}
-    <div style="display: none;">
+    <div class="modal-message" style="display: none;">
             <p id="messages">{{message}}</p>
     </div>
     {% endfor %}
