@@ -8,8 +8,15 @@
     {% include './components/sidebar.html' with current_page='home' %}
 
     {% for message in messages %}
-    <div class="modal-message" style="display: none;">
+    <div class="modal-message" >
+        <div class="container">
+            <button class="fechar-modal">
+                <span class="material-symbols-outlined">
+                    cancel
+                </span>
+            </button>
             <p id="messages">{{message}}</p>
+        </div>
     </div>
     {% endfor %}
 

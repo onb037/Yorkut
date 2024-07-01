@@ -17,3 +17,9 @@ botoesLike.forEach(botao => {
     }
   });
 });
+
+const modalMessage = document.querySelector('.modal-message');
+
+modalMessage.querySelector('.fechar-modal').addEventListener('click', ()=>{
+  modalMessage.style.display = 'none';
+})

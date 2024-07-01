@@ -1033,6 +1033,39 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   display: flex;
 }
 
+.modal-message {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+.modal-message .container {
+  background-color: #fff;
+  padding: 20px;
+  border: 4px;
+  color: #000000;
+  position: relative;
+  border-radius: 4px;
+  min-height: 20vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.modal-message .container .fechar-modal {
+  position: absolute;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #ff2b2b;
+  margin: 10px;
+  top: 0;
+  right: 0;
+}
+
 * {
   margin: 0;
   padding: 0;
