@@ -10,7 +10,8 @@ class PostForms(forms.ModelForm):
         fields = ['imagem', 'legenda']  
         widgets = {
             'legenda': forms.Textarea(attrs={'rows': 5, 'class': 'form-control'}),  
-            'imagem': forms.FileInput(attrs={'class': 'input-imagem'}),
+            'imagem': forms.FileInput(attrs={'class': 'input-imagem'}), 
+              
         }
 
     def clean_imagem(self):
