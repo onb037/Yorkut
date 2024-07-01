@@ -18,7 +18,7 @@ def card(request):
         messages.error(request, 'Usuário não logado')
         return redirect('login')
     
-    posts = Post.objects.order_by('data_hora_criacao').filter(privacidade=True)
+    posts = Post.objects.filter(privacidade=True).order_by('-data_hora_criacao')
     context = {'posts': posts}
     return render(request, 'galeria/card.html', context)
 
@@ -45,7 +45,6 @@ def editar_post(request):
 def apagar_post(request):
     pass
 
-#comentario
 def verpost(request, post_id):
     post = get_object_or_404(Post, id=post_id)
     if request.method == 'POST':
