@@ -24,5 +24,7 @@ body {
 // Container Principal
 @import './_postar-main.scss';
 
+@import '../components/container-lateral';
+
 // Carregar Tela
 @import '../components/loading-tela';

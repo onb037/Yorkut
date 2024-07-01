@@ -8,8 +8,15 @@
     {% include './components/sidebar.html' with current_page='home' %}
 
     {% for message in messages %}
-    <div style="display: none;">
+    <div class="modal-message" >
+        <div class="container">
+            <button class="fechar-modal">
+                <span class="material-symbols-outlined">
+                    cancel
+                </span>
+            </button>
             <p id="messages">{{message}}</p>
+        </div>
     </div>
     {% endfor %}
 
@@ -34,7 +41,7 @@
                       {% if post.autor.foto_perfil %}
                           <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
                       {% else %}
-                          <img src="{% static 'default_profile.jpg' %}" alt="" class="user-imagem amigo-imagem">
+                          <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="user-imagem amigo-imagem">
                       {% endif %}
                       <div class="user-info-post amigo-info">
                           <span class="nome-post">{{ post.autor.username }}</span>

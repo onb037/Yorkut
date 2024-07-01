@@ -1,7 +1,7 @@
 document.querySelector('.btn-config').addEventListener('click', function (e) {
     e.preventDefault();
     const modal = document.querySelector('.modal-config');
-    const btn = document.querySelector('.fechar-modal');
+    const btn = modal.querySelector('.fechar-modal');
     modal.classList.add('ativo');
 
     btn.addEventListener('click',()=>{

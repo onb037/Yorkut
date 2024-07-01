@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ body {
   display: block;
   font-size: 20px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Margarine", sans-serif;
   color: #004aad;
   margin-bottom: 5px;
 }
@@ -164,6 +165,8 @@ main .container-cabecalho {
   align-items: center;
   padding: 20px;
   gap: 30px;
+  border: 1px solid #ccc;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
 }
 main .container-cabecalho .imagem-perfil {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -202,7 +205,7 @@ main .container-cabecalho .infos-perfil .amigos-number .number {
 }
 main .container-cabecalho .btn-config {
   position: absolute;
-  margin: 30px;
+  margin: 20px;
   right: 0;
   top: 0;
   font-size: 24px;
@@ -294,6 +297,9 @@ main .container-postagens .post img {
 .container-lateral .seu-perfil .seus-info-perfil {
   display: flex;
   flex-direction: column;
+}
+.container-lateral .seu-perfil .seus-info-perfil .seu-nome-perfil {
+  text-transform: capitalize;
 }
 .container-lateral .seu-perfil .seus-info-perfil .seu-user-perfil {
   color: #ccc;

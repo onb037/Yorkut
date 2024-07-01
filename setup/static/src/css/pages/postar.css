@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Margarine&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -56,7 +57,7 @@ body {
   display: block;
   font-size: 20px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Margarine", sans-serif;
   color: #004aad;
   margin-bottom: 5px;
 }
@@ -144,6 +145,7 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 80px;
 }
 @media screen and (max-width: 1024px) {
   main {
@@ -156,13 +158,29 @@ main {
     margin: 0 0 0 20vw;
   }
 }
-main h1 {
+main #header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+main #header .btn-voltar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 20px;
   color: #fff;
-  font-weight: 500;
+  text-decoration: none;
+}
+main #header .btn-voltar .icon {
+  font-size: 24px;
+  padding: 10px;
+  background-color: #fff;
+  color: #004aad;
+  border-radius: 50%;
 }
 main .criar-postagem {
   display: flex;
-  align-items: center;
+  align-items: start;
   justify-content: center;
   gap: 40px;
   width: 100%;
@@ -224,7 +242,7 @@ main .criar-postagem .form-postagem .input-box .label-enviar-imagem {
   margin-bottom: 20px;
 }
 main .criar-postagem .form-postagem .input-box .label-enviar-imagem:hover {
-  background-color: #eee;
+  background-color: #004aad;
   color: #181818;
 }
 main .criar-postagem .form-postagem .input-box .input-imagem {
@@ -259,6 +277,253 @@ main .criar-postagem .form-postagem button {
 }
 main .criar-postagem .form-postagem button:hover {
   background: #004aad;
+}
+
+.container-lateral {
+  width: 25%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-left: 0.5px solid transparent;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+  background-color: rgba(24, 24, 24, 0.2117647059);
+  padding: 25px;
+  position: fixed;
+  height: 100vh;
+  right: 0;
+}
+@media screen and (max-width: 1024px) {
+  .container-lateral {
+    display: none;
+  }
+}
+.container-lateral .box {
+  width: 100%;
+  min-height: 50px;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  padding: 20px;
+  color: #fff;
+}
+.container-lateral .seu-perfil {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.container-lateral .seu-perfil .sua-imagem-perfil {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+  margin-right: 10px;
+  object-fit: cover;
+  object-position: center;
+}
+.container-lateral .seu-perfil .seus-info-perfil {
+  display: flex;
+  flex-direction: column;
+}
+.container-lateral .seu-perfil .seus-info-perfil .seu-nome-perfil {
+  text-transform: capitalize;
+}
+.container-lateral .seu-perfil .seus-info-perfil .seu-user-perfil {
+  color: #ccc;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.container-lateral .seu-perfil .btn-config {
+  position: absolute;
+  right: 0;
+  top: 50;
+  margin: 10px;
+  text-decoration: none;
+  color: #808080;
+  font-size: 24px;
+  transition: all ease 0.3s;
+}
+.container-lateral .seu-perfil .btn-config:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+.container-lateral .container-sugestao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-lateral .container-sugestao h3 {
+  font-size: 20px;
+}
+.container-lateral .container-sugestao .perfis-sugestao {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao {
+  display: flex;
+  padding: 10px 0px;
+  gap: 10px;
+  position: relative;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .perfil-sugestao-imagem {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+  object-fit: cover;
+  object-position: center;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao {
+  display: flex;
+  flex-direction: column;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #ccc;
+  font-size: 12px;
+  text-transform: lowercase;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #fff;
+  color: #004aad;
+  text-decoration: none;
+  position: absolute;
+  right: 0;
+  top: 50;
+  scale: 0.8;
+  transition: all ease 0.3s;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo:hover {
+  scale: 1;
+}
+.container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
+  color: rgb(27, 126, 27);
+}
+
+.modal-config {
+  position: fixed;
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+}
+.modal-config .container {
+  border: 1px solid #fff;
+  padding: 20px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  gap: 40px;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 2px solid transparent;
+  border-radius: 4px;
+  width: 580px;
+  max-width: 720px;
+  height: 65vh;
+}
+.modal-config .container .fechar-modal {
+  position: absolute;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  color: #ff2b2b;
+  margin: 10px;
+  top: 0;
+  right: 0;
+}
+.modal-config .container .fechar-modal span {
+  font-size: 32px;
+}
+.modal-config .container .title {
+  font-size: x-large;
+  padding-left: 20px;
+}
+.modal-config .container .editar-infos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.modal-config .container .editar-infos .input-box {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.modal-config .container .editar-infos .input-box input {
+  width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 0.5px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+}
+.modal-config .container .editar-infos .input-box input:focus {
+  outline: none;
+}
+.modal-config .container .editar-infos .editar-foto {
+  width: 100%;
+  display: flex;
+  align-items: start;
+  justify-content: space-between;
+}
+.modal-config .container .editar-infos .editar-foto .image-preview {
+  width: 180px;
+  height: 180px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  position: absolute;
+  margin-top: 120px;
+  margin-right: 60px;
+  right: 0;
+  top: 0;
+  box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.8);
+}
+.modal-config .container .editar-infos .editar-foto .input-box {
+  width: 250px;
+}
+.modal-config .container .editar-infos .editar-foto .input-box label {
+  width: 100%;
+  padding: 10px 20px;
+  background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border: 0.5px solid transparent;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+}
+.modal-config .container .editar-infos .editar-foto .input-box input {
+  display: none;
+}
+.modal-config .container .editar-infos .btn-salvar {
+  width: 250px;
+  padding: 10px 20px;
+  color: #fff;
+  background: #004aad;
+  border: none;
+  cursor: pointer;
+  transition: all ease 0.5s;
+  border-radius: 5px;
+}
+.modal-config .container .editar-infos .btn-salvar:hover {
+  color: #004aad;
+  background-color: #fff;
+}
+
+.modal-config.ativo {
+  display: flex;
 }
 
 #loading-screen {
