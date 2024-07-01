@@ -1,0 +1,31 @@
+{% load static %}
+<div class="modal-config">
+    <div class="container">
+        <button class="fechar-modal">
+            <span class="material-symbols-outlined">
+                cancel
+            </span>
+        </button>
+        <h2 class="title">Configurações</h2>
+        <form action="" class="editar-infos">
+            <div class="input-box">
+                <label for="editar-nome">Alterar nome:</label>
+                <input type="text" name="" id="editar-nome" placeholder="Novo Nome">
+            </div>
+            <div class="input-box">
+                <label for="editar-user">Alterar nome de usuário:</label>
+                <input type="text" name="" id="editar-user" placeholder="novouser">
+            </div>
+            <div class="editar-foto">
+                <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" class="image-preview" id="imagem-preview">
+                <div class="input-box">
+                    <label for="editar-foto">Alterar foto de perfil:</label>
+                    <input type="file" name="" id="editar-foto">
+                </div>
+            </div>
+            <button type="submit" class="btn-salvar">Salvar</button>
+        </form>
+    </div>
+</div>
+
+<script src="{% static './src/js/modal-config.js' %}"></script>

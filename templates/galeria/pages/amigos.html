@@ -10,13 +10,9 @@
     <title>Bem-Vindo ao Yorkut</title>
 </head>
 <body>
-    <div id="loading-screen">
-        <div class="spinner"></div>
-        <p>Carregando...</p>
-    </div>
-    <script src="{% static './src/js/loading-screen.js'%}"></script>
 
-    
+
+    {% include '../components/loading-screen.html'%}
     {% include '../components/sidebar.html' with current_page='amigos' %}
 
 
@@ -64,67 +60,7 @@
     </main>
 
     <!-- Aqui é onde vai ter um mini perfil e sugestão de amigos -->
-    <section class="container-lateral" id="container-lateral">
-        <div class="seu-perfil box">
-            <img src="https://t4.ftcdn.net/jpg/03/49/49/79/360_F_349497933_Ly4im8BDmHLaLzgyKg2f2yZOvJjBtlw5.webp" alt=""
-                class="sua-imagem-perfil">
-            <div class="seus-info-perfil">
-                <span class="seu-nome-perfil">Seu Nome</span>
-                <span class="seu-user-perfil">SeuUser</span>
-            </div>
-            <a href="" class="btn-config">
-                <span class="material-symbols-outlined">
-                    settings
-                </span>
-            </a>
-        </div>
-
-        <div class="container-sugestao box">
-            <h3>Sigua eles também!</h3>
-            <div class="perfis-sugestao">
-                <!-- Cada perfil-sugestao é um perfil -->
-                <div class="perfil-sugestao">
-                    <img src="https://www.netflu.com.br/futebol-internacional/wp-content/uploads/2024/03/mbappe1-1.jpg"
-                        alt="" class="perfil-sugestao-imagem">
-                    <div class="infos-perfil-sugestao">
-                        <span class="nome">Kylian Mbappé</span>
-                        <span class="user">k.Mbappe</span>
-                    </div>
-                    <a href="" class="btn-serAmigo">
-                        <span class="material-symbols-outlined">
-                            person_add
-                        </span>
-                    </a>
-                </div>
-                <div class="perfil-sugestao">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRi1rrfWwm41mgIxG1ZZWqaeRfA8LjVe9i4lg&s"
-                        alt="" class="perfil-sugestao-imagem">
-                    <div class="infos-perfil-sugestao">
-                        <span class="nome">Vinicius Jr.</span>
-                        <span class="user">vinijr</span>
-                    </div>
-                    <a href="" class="btn-serAmigo">
-                        <span class="material-symbols-outlined">
-                            person_add
-                        </span>
-                    </a>
-                </div>
-                <div class="perfil-sugestao">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTv-UY5Vo9hk2V1V7ZG_4bnaw_mY1bV1YxuGA&s"
-                        alt="" class="perfil-sugestao-imagem">
-                    <div class="infos-perfil-sugestao">
-                        <span class="nome">Rodrygo Goes</span>
-                        <span class="user">rodrygogoes</span>
-                    </div>
-                    <a href="" class="btn-serAmigo">
-                        <span class="material-symbols-outlined">
-                            person_add
-                        </span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
+    {% include '../components/lateral.html' with current_page='amigos' %}
 
     <script src="{% static './src/js/amigo.js' %}"></script>
 </body>

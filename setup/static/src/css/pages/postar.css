@@ -273,6 +273,7 @@ main .criar-postagem .form-postagem button:hover {
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  color: #000;
 }
 #loading-screen .spinner {
   border: 16px solid #f3f3f3;
