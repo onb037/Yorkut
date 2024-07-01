@@ -17,5 +17,3 @@ botoesLike.forEach(botao => {
     }
   });
 });
-
-
