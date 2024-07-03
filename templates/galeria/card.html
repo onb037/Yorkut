@@ -34,15 +34,15 @@
 
     <!-- container das postagens, cada "postagem" uma postagem -->
     <section class="container-postagens">
-      {% if posts %}
-          {% for post in posts %}
-              <div class="postagem" id="postagem">
-                  <div class="cabecalho-post">
-                      {% if post.autor.foto_perfil %}
-                          <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
-                      {% else %}
-                          <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="user-imagem amigo-imagem">
-                      {% endif %}
+    {% if posts %}
+        {% for post in posts %}
+            <div class="postagem" id="postagem">
+                <div class="cabecalho-post">
+                    {% if post.autor.foto_perfil %}
+                        <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
+                    {% else %}
+                        <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="user-imagem amigo-imagem">
+                    {% endif %}
                       <div class="user-info-post amigo-info">
                           <span class="nome-post">{{ post.autor.username }}</span>
                           <span class="user-post amigo-user">{{ post.autor.username }}</span>

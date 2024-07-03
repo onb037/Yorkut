@@ -27,3 +27,4 @@ class ComentarioForm(forms.ModelForm):
         model = Comentario
         fields = ['texto']
 
+

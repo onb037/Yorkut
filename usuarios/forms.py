@@ -2,6 +2,8 @@ from django import forms
 
 from django.contrib.auth.models import User
 
+from django.core.exceptions import ValidationError
+
 class LoginForms(forms.Form):
     nome_login=forms.CharField(
             label='Usuário', 
@@ -30,7 +32,7 @@ class LoginForms(forms.Form):
     )
         
 class CadastroForms(forms.Form):
-    nome_cadastro=forms.CharField(
+    nome_cadastro = forms.CharField(
         label='Nome', 
         required=True, 
         max_length=100,
@@ -41,7 +43,7 @@ class CadastroForms(forms.Form):
             }
         )
     )
-    email=forms.EmailField(
+    email = forms.EmailField(
         label='Email',
         required=True,
         max_length=100,
@@ -52,7 +54,7 @@ class CadastroForms(forms.Form):
             }
         )
     )
-    senha_1=forms.CharField(
+    senha_1 = forms.CharField(
         label='Senha', 
         required=True, 
         max_length=70,
@@ -63,7 +65,7 @@ class CadastroForms(forms.Form):
             }
         ),
     )
-    senha_2=forms.CharField(
+    senha_2 = forms.CharField(
         label='Confirmar Senha', 
         required=True, 
         max_length=70,
@@ -74,6 +76,28 @@ class CadastroForms(forms.Form):
             }
         ),
     )
+
+    def clean_senha_1(self):
+        senha_1 = self.cleaned_data.get('senha_1')
+        if len(senha_1) < 8:
+            raise ValidationError("A senha deve ter no mínimo 8 caracteres.")
+        return senha_1
+
+    def clean_senha_2(self):
+        senha_2 = self.cleaned_data.get('senha_2')
+        if len(senha_2) < 8:
+            raise ValidationError("A senha deve ter no mínimo 8 caracteres.")
+        return senha_2
+
+    def clean(self):
+        cleaned_data = super().clean()
+        senha_1 = cleaned_data.get("senha_1")
+        senha_2 = cleaned_data.get("senha_2")
+
+        if senha_1 and senha_2 and senha_1 != senha_2:
+            raise ValidationError("As senhas não coincidem.")
+
+        return cleaned_data
         
     
         
