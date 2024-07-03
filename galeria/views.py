@@ -6,6 +6,8 @@ from galeria.models import Post, Comentario
 
 from galeria.forms import PostForms, ComentarioForm
 
+from django.contrib.auth.decorators import login_required
+
 from django.contrib import messages
 
 
@@ -65,3 +67,4 @@ def perfil(request):
 
 def amigos(request):
     return render(request, 'galeria/pages/amigos.html')
+
