@@ -131,6 +131,18 @@
   color: red;
 }
 
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -298,7 +310,25 @@
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;
@@ -574,6 +604,18 @@ body {
   color: red;
 }
 
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
+}
+
 main {
   width: calc(75% - 200px);
   height: 100%;
@@ -800,6 +842,29 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
   background: rgba(124, 124, 124, 0.4); /* Cor e transparência da barra de rolagem ao passar o mouse */
 }
 
+body.light {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6);
+  color: #000;
+}
+body.light .container-amigos .amigo-user {
+  color: #000;
+}
+body.light .postagem {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-postagens .postagem .cabecalho-post {
+  color: #000;
+}
+body.light .container-postagens .postagem .cabecalho-post .user-post {
+  color: #181818;
+}
+body.light .container-postagens .postagem .text-post {
+  color: #000;
+}
+body.light .container-postagens .postagem .text-post .legenda-post {
+  color: #181818;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -967,7 +1032,25 @@ main .container-postagens .postagem .acao-post .icon-like.ativo {
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;
@@ -1214,6 +1297,18 @@ body {
 }
 .sidebar .sair span {
   color: red;
+}
+
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
 }
 
 main {
@@ -1500,7 +1595,25 @@ main .container-postagens .post img {
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;
@@ -1744,6 +1857,18 @@ body {
 }
 .sidebar .sair span {
   color: red;
+}
+
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
 }
 
 main {
@@ -2056,7 +2181,25 @@ main .criar-postagem .form-postagem button:hover {
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;
@@ -2332,6 +2475,18 @@ body {
   color: red;
 }
 
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -2499,7 +2654,25 @@ body {
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;

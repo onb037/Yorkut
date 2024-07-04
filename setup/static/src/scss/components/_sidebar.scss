@@ -132,3 +132,19 @@
         }
     }
 }
+
+body.light {
+    .sidebar {
+        background: linear-gradient(45deg,#d6d6d6,#d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+        border-right: 0.25px solid transparent;
+        color: #000;
+
+        .side-item {
+            color: #000;
+
+            .side-text {
+                color: #000;
+            }
+        }
+    }
+}
