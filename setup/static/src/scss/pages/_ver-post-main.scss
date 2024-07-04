@@ -283,6 +283,77 @@
             }
         }
     }
+}
 
 
+
+// Modo Noturno 
+
+body.light {
+   #main {
+    #header {
+        .btn-voltar {
+            color: #000;
+
+        }
+
+    }
+    .container-postagens {
+        .postagem {
+            background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+            
+            .cabecalho-post {
+                color: #000;
+
+                .user-info-post {
+                    .user-post {
+                        color: #181818;
+                    }
+                }
+            }
+
+            .text-post {
+                color: #000;
+                .legenda-post {
+                    color: #181818;
+                }
+            }
+        }
+        .ver-comentario {
+            .fazer-comentario {
+                background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+
+                .suas-info {
+                    .seu-user {
+                        color: #181818;
+                    }
+                }
+
+                #fazer-comentario {
+                    color: #000;
+
+                    &:focus {
+                        outline: none;
+                    }
+                }
+
+            }
+
+            .outros-comentario {
+
+                .comentario {
+                    .info-usuario {
+                        .user {
+                            color: #000;
+                        }
+                    }
+
+                    .texto {
+                        color: #181818;
+                    }
+                }
+            }
+        }
+    }
+   }
 }

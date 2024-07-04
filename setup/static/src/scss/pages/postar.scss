@@ -18,6 +18,10 @@ body {
     flex-direction: row;
 }
 
+body.light {
+    background: #d6d6d6;
+}
+
 // Sidebar
 @import '../components/sidebar';
 

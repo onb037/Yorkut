@@ -1,123 +1,147 @@
 #main {
-    width: calc(75% - 200px);
-    height: 100%;
-    padding: 25px;
-    margin: 0 0 0 200px;
+  width: calc(75% - 200px);
+  height: 100%;
+  padding: 25px;
+  margin: 0 0 0 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #fff;
+  gap: 40px;
+
+  #header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    .btn-voltar {
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      font-size: 20px;
+      color: #fff;
+      text-decoration: none;
+
+      .icon {
+        font-size: 24px;
+        padding: 10px;
+        background-color: #fff;
+        color: #004aad;
+        border-radius: 50%;
+      }
+    }
+  }
+
+  .container-amigos {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    color: #fff;
+    align-items: start;
     gap: 40px;
+    width: 100%;
 
-    #header {
-        width: 100%;
+    .titulo-amigos {
+      font-size: xx-large;
+      font-weight: 700;
+      padding-left: 20px;
+
+      b {
+        color: #004aad;
+      }
+    }
+
+    .box-amigos {
+      display: flex;
+      flex-direction: column;
+      border: 0.5px solid #b3b3b3;
+      width: 100%;
+
+      .amigo {
         display: flex;
         align-items: center;
+        gap: 20px;
+        padding: 15px;
+        transition: all ease 0.5s;
+        position: relative;
 
-        .btn-voltar {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            font-size: 20px;
-            color: #fff;
-            text-decoration: none;
-
-            .icon {
-                font-size: 24px;
-                padding: 10px;
-                background-color: #fff;
-                color: #004aad;
-                border-radius: 50%;
-            }
+        &:hover {
+          background-color: rgba($color: #000000, $alpha: 0.5);
         }
 
+        .imagem-amigo {
+          width: 60px;
+          height: 60px;
+          border-radius: 50%;
+          object-fit: cover;
+          object-position: center;
+        }
+
+        .text-amigo {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+
+          .nome-amigo {
+            font-size: larger;
+          }
+
+          .user-amigo {
+            font-size: small;
+            color: #b3b3b3;
+            text-transform: lowercase;
+          }
+        }
+
+        .btn-serAmigo {
+          padding: 15px;
+          background-color: #fff;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-decoration: none;
+          color: rgb(255, 59, 59);
+          font-weight: bold;
+          border-radius: 50%;
+          scale: 0.8;
+          transition: all ease 0.5s;
+          position: absolute;
+          right: 0;
+          top: 50;
+          margin: 10px;
+
+          &:hover {
+            scale: 1;
+          }
+        }
+
+        .btn-serAmigo.seguindo {
+          color: rgb(27, 126, 27);
+        }
+      }
+    }
+  }
+}
+
+
+// Modo Noturno
+
+body.light {
+  #main {
+    color: #000;
+
+    #header {
+      .btn-voltar {
+        color: #000;
+      }
     }
 
     .container-amigos {
-        display: flex;
-        flex-direction: column;
-        align-items: start;
-        gap: 40px;
-        width: 100%;
+      .box-amigos {
+        border: 0.5px solid #181818;
 
-        .titulo-amigos {
-            font-size: xx-large;
-            font-weight: 700;
-            padding-left: 20px;
-
-            b {
-                color: #004aad;
-            }
+        .amigo .text-amigo .user-amigo {
+          color: #181818;
         }
-
-        .box-amigos {
-            display: flex;
-            flex-direction: column;
-            border: 0.5px solid #b3b3b3;
-            width: 100%;
-
-            .amigo {
-                display: flex;
-                align-items: center;
-                gap: 20px;
-                padding: 15px;
-                transition: all ease 0.5s;
-                position: relative;
-
-                &:hover {
-                    background-color: rgba($color: #000000, $alpha: 0.5);
-                }
-
-                .imagem-amigo {
-                    width: 60px;
-                    height: 60px;
-                    border-radius: 50%;
-                    object-fit: cover;
-                    object-position: center;
-                }
-
-                .text-amigo {
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-
-                    .nome-amigo {
-                        font-size: larger;
-                    }
-
-                    .user-amigo {
-                        font-size: small;
-                        color: #b3b3b3;
-                        text-transform: lowercase;
-                    }
-                }
-
-                .btn-serAmigo {
-                    padding: 15px;
-                    background-color: #fff;
-                    display: flex;
-                    align-items: center;
-                    justify-content: center;
-                    text-decoration: none;
-                    color: rgb(255, 59, 59);
-                    font-weight: bold;
-                    border-radius: 50%;
-                    scale: 0.80;
-                    transition: all ease 0.5s;
-                    position: absolute;
-                    right: 0;
-                    top: 50;
-                    margin: 10px;
-                    
-                    &:hover {
-                        scale: 1;
-                    }
-                }
-
-                .btn-serAmigo.seguindo {
-                    color: rgb(27, 126, 27);
-                }
-            }
-        }
+      }
     }
+  }
 }

@@ -16,14 +16,16 @@
 
     <main class="main" id="main">
         <div class="container-cabecalho">
-            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT617RdXDw8ufyxOVILqQwCiU_BfhNp8ErH9w&s"
+            <img src="{% static './src/logo/image-default.jpg' %}"
              alt="" class="imagem-perfil">
             <div class="infos-perfil">
-                <span class="nome-perfil">Neymar Jr.</span>
-                <span class="user-perfil">neymar</span>
+                {% if user.is_authenticated %}
+                <span class="nome-perfil">{{ user.get_username }}</span>
+                <span class="user-perfil">{{ user.get_username }}</span>
+                {%endif%}
                 <div class="amigos-number">
                     <span class="text">Amigos:</span>
-                    <span class="number">6969</span>
+                    <span class="number">0</span>
                 </div>
             </div>
             <button href="" class="btn-config" id="btn-config">

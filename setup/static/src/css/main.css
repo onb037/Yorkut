@@ -153,6 +153,7 @@ body.light .sidebar .side-item .side-text {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -267,6 +268,26 @@ body.light .sidebar .side-item .side-text {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
   color: rgb(27, 126, 27);
+}
+
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
 }
 
 .modal-config {
@@ -875,6 +896,7 @@ body.light .container-postagens .postagem .text-post .legenda-post {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -989,6 +1011,26 @@ body.light .container-postagens .postagem .text-post .legenda-post {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
   color: rgb(27, 126, 27);
+}
+
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
 }
 
 .modal-config {
@@ -1180,6 +1222,11 @@ body {
   color: #fff;
 }
 
+body.light {
+  background: #d6d6d6;
+  color: #000;
+}
+
 .sidebar {
   height: 100%;
   width: 200px;
@@ -1341,7 +1388,7 @@ main .container-cabecalho {
   padding: 20px;
   gap: 30px;
   border: 1px solid #ccc;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 main .container-cabecalho .imagem-perfil {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -1428,6 +1475,19 @@ main .container-postagens .post img {
   object-position: center;
 }
 
+body.light main .container-cabecalho {
+  border: 1px solid #181818;
+}
+body.light main .container-cabecalho .infos-perfil .nome-perfil {
+  color: #000;
+}
+body.light main .container-cabecalho .infos-perfil .user-perfil {
+  color: #181818;
+}
+body.light main .container-cabecalho .infos-perfil .amigos-number {
+  color: #000;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -1438,6 +1498,7 @@ main .container-postagens .post img {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -1552,6 +1613,26 @@ main .container-postagens .post img {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
   color: rgb(27, 126, 27);
+}
+
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
 }
 
 .modal-config {
@@ -1738,6 +1819,10 @@ body {
   background: #181818;
   display: flex;
   flex-direction: row;
+}
+
+body.light {
+  background: #d6d6d6;
 }
 
 .sidebar {
@@ -2014,6 +2099,10 @@ main .criar-postagem .form-postagem button:hover {
   background: #004aad;
 }
 
+main #header .btn-voltar {
+  color: #000;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -2024,6 +2113,7 @@ main .criar-postagem .form-postagem button:hover {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -2138,6 +2228,26 @@ main .criar-postagem .form-postagem button:hover {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
   color: rgb(27, 126, 27);
+}
+
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
 }
 
 .modal-config {
@@ -2325,6 +2435,10 @@ body {
   flex-direction: row;
 }
 
+body.light {
+  background: #d6d6d6;
+}
+
 #loading-screen {
   position: fixed;
   top: 0;
@@ -2497,6 +2611,7 @@ body.light .sidebar .side-item .side-text {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -2611,6 +2726,26 @@ body.light .sidebar .side-item .side-text {
 }
 .container-lateral .container-sugestao .perfis-sugestao .perfil-sugestao .btn-serAmigo.seguindo {
   color: rgb(27, 126, 27);
+}
+
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
 }
 
 .modal-config {
@@ -2993,6 +3128,43 @@ body.light .sidebar .side-item .side-text {
   width: 80%;
   max-height: 120px;
   text-align: start;
+}
+
+body.light #main #header .btn-voltar {
+  color: #000;
+}
+body.light #main .container-postagens .postagem {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light #main .container-postagens .postagem .cabecalho-post {
+  color: #000;
+}
+body.light #main .container-postagens .postagem .cabecalho-post .user-info-post .user-post {
+  color: #181818;
+}
+body.light #main .container-postagens .postagem .text-post {
+  color: #000;
+}
+body.light #main .container-postagens .postagem .text-post .legenda-post {
+  color: #181818;
+}
+body.light #main .container-postagens .ver-comentario .fazer-comentario {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light #main .container-postagens .ver-comentario .fazer-comentario .suas-info .seu-user {
+  color: #181818;
+}
+body.light #main .container-postagens .ver-comentario .fazer-comentario #fazer-comentario {
+  color: #000;
+}
+body.light #main .container-postagens .ver-comentario .fazer-comentario #fazer-comentario:focus {
+  outline: none;
+}
+body.light #main .container-postagens .ver-comentario .outros-comentario .comentario .info-usuario .user {
+  color: #000;
+}
+body.light #main .container-postagens .ver-comentario .outros-comentario .comentario .texto {
+  color: #181818;
 }
 
 /*# sourceMappingURL=main.css.map */
