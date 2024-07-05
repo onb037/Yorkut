@@ -26,7 +26,7 @@ main {
         padding: 20px;
         gap: 30px;
         border: 1px solid #ccc;
-        box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.7);
+        box-shadow: 5px 5px 5px rgba($color: #000000, $alpha: 0.3);
 
         .imagem-perfil {
             background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -122,6 +122,30 @@ main {
                 height: 100%;
                 object-fit: cover;
                 object-position: center;
+            }
+        }
+    }
+}
+
+// Modo Noturno
+
+body.light {
+    main {
+        .container-cabecalho {
+            border: 1px solid #181818;
+
+            .infos-perfil {
+                .nome-perfil {
+                    color: #000;
+                }
+    
+                .user-perfil {
+                    color: #181818;
+                }
+    
+                .amigos-number {
+                    color: #000;
+                }
             }
         }
     }

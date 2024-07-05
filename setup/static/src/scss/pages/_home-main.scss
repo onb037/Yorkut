@@ -246,3 +246,36 @@ main {
     background: rgba(124, 124, 124, 0.4); /* Cor e transparência da barra de rolagem ao passar o mouse */
 }
 
+
+
+// Modo Noturno 
+
+body.light{
+    background: linear-gradient(45deg,#d6d6d6,#d6d6d6);
+    color: #000;
+
+    .container-amigos .amigo-user {
+        color: #000;
+    }
+
+    .postagem {
+        background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+            
+    }
+
+    .container-postagens .postagem .cabecalho-post {
+        color: #000;
+
+        .user-post {
+            color: #181818;
+        }
+    }
+
+    .container-postagens .postagem .text-post {
+        color: #000;
+
+        .legenda-post {
+            color: #181818;
+        }
+    }
+}

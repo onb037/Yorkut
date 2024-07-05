@@ -59,7 +59,7 @@
                 <form class="fazer-comentario" action="{% url 'verpost' post.id %}" method="post">
                     {% csrf_token %}
                     <div class="suas-info">
-                        <img src="{% if request.user.profile.foto_perfil %}{{ request.user.profile.foto_perfil.url }}{% else %}{% static 'default_profile.jpg' %}{% endif %}"
+                        <img src="{% if request.user.profile.foto_perfil %}{{ request.user.profile.foto_perfil.url }}{% else %}{% static './src/logo/image-default.jpg' %}{% endif %}"
                             alt="" class="sua-imagem">
                         <span class="seu-user">{{ request.user.username }}</span>
                     </div>

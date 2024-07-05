@@ -17,6 +17,11 @@ body {
   color: #fff;
 }
 
+body.light {
+  background: #d6d6d6;
+  color: #000;
+}
+
 .sidebar {
   height: 100%;
   width: 200px;
@@ -106,6 +111,13 @@ body {
   font-size: 28px;
   transition: all ease 0.3s;
 }
+.sidebar .side-items .side-item.bloqueado {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.sidebar .side-items .side-item.bloqueado:hover {
+  opacity: 0.6;
+}
 .sidebar .side-items .side-item.ativo {
   font-weight: bold;
 }
@@ -134,6 +146,18 @@ body {
 }
 .sidebar .sair span {
   color: red;
+}
+
+body.light .sidebar {
+  background: linear-gradient(45deg, #d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  border-right: 0.25px solid transparent;
+  color: #000;
+}
+body.light .sidebar .side-item {
+  color: #000;
+}
+body.light .sidebar .side-item .side-text {
+  color: #000;
 }
 
 main {
@@ -166,7 +190,7 @@ main .container-cabecalho {
   padding: 20px;
   gap: 30px;
   border: 1px solid #ccc;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 main .container-cabecalho .imagem-perfil {
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -253,6 +277,19 @@ main .container-postagens .post img {
   object-position: center;
 }
 
+body.light main .container-cabecalho {
+  border: 1px solid #181818;
+}
+body.light main .container-cabecalho .infos-perfil .nome-perfil {
+  color: #000;
+}
+body.light main .container-cabecalho .infos-perfil .user-perfil {
+  color: #181818;
+}
+body.light main .container-cabecalho .infos-perfil .amigos-number {
+  color: #000;
+}
+
 .container-lateral {
   width: 25%;
   background: linear-gradient(#181818, #181818) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
@@ -263,6 +300,7 @@ main .container-postagens .post img {
   position: fixed;
   height: 100vh;
   right: 0;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
 }
 @media screen and (max-width: 1024px) {
   .container-lateral {
@@ -379,6 +417,26 @@ main .container-postagens .post img {
   color: rgb(27, 126, 27);
 }
 
+body.light .container-lateral {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+}
+body.light .container-lateral .box {
+  background: linear-gradient(#d6d6d6, #d6d6d6) padding-box, linear-gradient(90deg, #004aad, #40c9ff) border-box;
+  color: #000;
+}
+body.light .container-lateral .seus-info-perfil .seu-user-perfil {
+  color: #181818;
+}
+body.light .container-lateral .btn-config {
+  color: #1d1d1d;
+}
+body.light .container-lateral .btn-config:hover {
+  color: #000;
+}
+body.light .container-lateral .perfis-sugestao .perfil-sugestao .infos-perfil-sugestao .user {
+  color: #181818;
+}
+
 .modal-config {
   position: fixed;
   display: none;
@@ -420,7 +478,25 @@ main .container-postagens .post img {
 }
 .modal-config .container .title {
   font-size: x-large;
+  margin-left: 20px;
   padding-left: 20px;
+}
+.modal-config .container .botao-noturno {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 20px;
+  margin-left: 20px;
+  background: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.modal-config .container .botao-noturno span {
+  padding: 5px;
+  font-size: 24px;
+  color: #ffbb00;
+  text-align: center;
+  font-weight: bold;
 }
 .modal-config .container .editar-infos {
   display: flex;
