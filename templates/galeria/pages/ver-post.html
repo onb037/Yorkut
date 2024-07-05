@@ -28,7 +28,11 @@
             <!-- auto explicativo as classe ne :) -->
             <div class="postagem" id="postagem">
                 <div class="cabecalho-post">
-                    <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
+                    {% if post.autor.foto_perfil %}
+                        <img src="{{ post.autor.foto_perfil.url }}" alt="" class="user-imagem amigo-imagem">
+                    {% else %}
+                        <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="user-imagem amigo-imagem">
+                    {% endif %}
                     <div class="user-info-post amigo-info">
                         <span class="nome-post">{{ post.autor.username }}</span>
                         <span class="user-post amigo-user">{{ post.autor.username }}</span>
@@ -59,8 +63,11 @@
                 <form class="fazer-comentario" action="{% url 'verpost' post.id %}" method="post">
                     {% csrf_token %}
                     <div class="suas-info">
-                        <img src="{% if request.user.profile.foto_perfil %}{{ request.user.profile.foto_perfil.url }}{% else %}{% static './src/logo/image-default.jpg' %}{% endif %}"
-                            alt="" class="sua-imagem">
+                        {% if request.user.profile.foto_perfil %}
+                            <img src="{{ request.user.profile.foto_perfil.url }}" alt="" class="sua-imagem">
+                        {% else %}
+                            <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="sua-imagem">
+                        {% endif %}
                         <span class="seu-user">{{ request.user.username }}</span>
                     </div>
                 
@@ -73,7 +80,11 @@
                     {% for comentario in post.comentarios.all %}
                         <div class="comentario">
                             <div class="info-usuario">
-                                <img src="{{ comentario.autor.profile.foto_perfil.url }}" alt="" class="imagem">
+                                {% if comentario.autor.profile.foto_perfil %}
+                                    <img src="{{ comentario.autor.profile.foto_perfil.url }}" alt="" class="imagem">
+                                {% else %}
+                                    <img src="{% static './src/logo/image-default.jpg' %}" alt="" class="imagem">
+                                {% endif %}
                                 <span class="user">{{ comentario.autor.username }}</span>
                             </div>
                             <p class="texto">{{ comentario.texto }}</p>

@@ -302,7 +302,7 @@ main .criar-postagem .form-postagem button:hover {
   background: #004aad;
 }
 
-main #header .btn-voltar {
+body.light main #header .btn-voltar {
   color: #000;
 }
 
