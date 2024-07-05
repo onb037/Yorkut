@@ -137,6 +137,13 @@ body {
   min-width: 260px;
 }
 
+@media screen and(max-width: 600px) {
+  .container-formulario .inputs {
+    width: 100%;
+    align-items: center;
+  }
+}
+
 .container-formulario .inputs input {
   background: linear-gradient(#2e2e2e, #2e2e2e) padding-box, linear-gradient(90deg, #004AAD, #40c9ff) border-box;
   border: 2px solid transparent;

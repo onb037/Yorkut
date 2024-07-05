@@ -47,11 +47,16 @@ def cadastro(request):
                 messages.error(request, "Usuário já existente!")
                 return redirect('cadastro')
 
-            usuario = User.objects.create_user(username=nome, email=email, password=senha)
-            usuario.save()
-            messages.success(request, "Cadastrado com sucesso!")
-            logger.info(f"Novo usuário cadastrado: {nome}")
-            return redirect('login')
+            try:
+                usuario = User.objects.create_user(username=nome, email=email, password=senha)
+                usuario.save()
+                messages.success(request, "Cadastrado com sucesso!")
+                logger.info(f"Novo usuário cadastrado: {nome}")
+                return redirect('login')
+            except Exception as e:
+                messages.error(request, f"Ocorreu um erro durante o cadastro: {e}")
+                logger.error(f"Erro ao cadastrar usuário {nome}: {e}")
+
     return render(request, 'usuarios/cadastro.html', {'form': form})
 
 def redefinir(request):
