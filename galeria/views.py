@@ -63,7 +63,16 @@ def verpost(request, post_id):
     return render(request, 'galeria/pages/ver-post.html', {'post': post, 'form': form})
 
 def perfil(request):
-    return render(request, 'galeria/pages/perfil.html')
+    if not request.user.is_authenticated:
+        messages.error(request, 'Usuário não logado')
+        return redirect('login')
+    
+    posts = Post.objects.filter(autor=request.user).order_by('-data_hora_criacao')
+    context = {
+        'posts': posts
+    }
+    return render(request, 'galeria/pages/perfil.html', context)
+
 
 def amigos(request):
     return render(request, 'galeria/pages/amigos.html')

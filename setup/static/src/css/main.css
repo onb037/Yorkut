@@ -1474,7 +1474,7 @@ main .container-postagens {
   display: flex;
   flex-wrap: wrap;
   align-items: start;
-  justify-content: space-between;
+  justify-content: start;
   gap: 20px;
 }
 main .container-postagens .post {
