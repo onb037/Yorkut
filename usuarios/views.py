@@ -25,7 +25,7 @@ def login(request):
             usuario = auth.authenticate(request, username=nome, password=senha)
             if usuario is not None:
                 auth.login(request, usuario)
-                messages.success(request, f"{nome} Logado com sucesso!")
+                messages.success(request, f"{nome} logado com sucesso!")
                 logger.info(f"Usuário {nome} logado com sucesso.")
                 return redirect('card')
             else:

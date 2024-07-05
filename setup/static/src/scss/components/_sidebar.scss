@@ -99,6 +99,15 @@
             }
         }
 
+        .side-item.bloqueado {
+            cursor: not-allowed;
+            opacity: 0.5;
+        }
+        
+        .side-item.bloqueado:hover {
+            opacity: 0.6; 
+        }
+
         .side-item.ativo {
             font-weight: bold;
         }

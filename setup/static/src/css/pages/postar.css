@@ -110,6 +110,13 @@ body.light {
   font-size: 28px;
   transition: all ease 0.3s;
 }
+.sidebar .side-items .side-item.bloqueado {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.sidebar .side-items .side-item.bloqueado:hover {
+  opacity: 0.6;
+}
 .sidebar .side-items .side-item.ativo {
   font-weight: bold;
 }
